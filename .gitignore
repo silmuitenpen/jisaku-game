@@ -1,0 +1,53 @@
+# Source PDFs
+
+source/*.pdf
+
+# Keep source README
+
+!source/README.md
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+
+.vscode/
+.idea/
+
+# Node / package artifacts, if added later
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build artifacts, if added later
+
+dist/
+build/
+
+# Temporary files
+
+tmp/
+temp/
+.cache/
+*.tmp
+*.bak
+
+# Logs
+
+*.log
+
+# Python cache, if helper scripts are added later
+
+**pycache**/
+*.pyc
+.venv/
+venv/
+
+# Do NOT ignore generated/data/sealed/
+
+# sealed/ contains spoiler-heavy artifacts, but they are intentionally tracked.
