@@ -903,6 +903,153 @@ Do not use a single generic hint for every prompt. Hints should be character-spe
 * gentle upperclassman: a soft question that points to the missing assumption
 * strict second-year: precise warning about what loses points
 
+
+## 16B. Strong Multiple-Choice Prompt Policy
+
+New MVP science gate prompts should normally be single-answer, four-option choice questions unless the current target explicitly needs another machine-gradable gate. They must not be simple vocabulary checks.
+
+Weak prompt pattern, forbidden for tournament gates:
+
+```text
+What does |psi> represent?
+A. state vector
+B. probability
+C. energy
+D. time
+```
+
+This only asks whether the player recognizes a term. It is too thin for a science olympiad game.
+
+Strong prompt pattern:
+
+```text
+setting -> trap-bearing first step -> four choices -> short formula explanation -> character reaction
+```
+
+Good compressed example:
+
+```text
+For \( |\psi\rangle=(|0\rangle+i|1\rangle)/\sqrt{2} \), which expression is \( \langle\psi| \)?
+A. \( (\langle0|+i\langle1|)/\sqrt{2} \)
+B. \( (\langle0|-i\langle1|)/\sqrt{2} \)
+C. \( (|0\rangle-i|1\rangle)/\sqrt{2} \)
+D. \( (\langle0|+\langle1|)/\sqrt{2} \)
+```
+
+The correct answer is B. A forgets complex conjugation, C confuses bra and ket type, and D drops the coefficient structure.
+
+Problem-design references may include public graduate entrance exams, public physics qualifying exams, quantum mechanics concept-inventory or misconception research, standard textbook and lecture-note problems, and the current `source/textbook.pdf`. Do not copy exact wording, numbers, settings, or distinctive phrasing from external references. Extract only abstract design elements: concept target, subproblem order, misconception trap, amount of algebra, physical interpretation, and the decisive first step.
+
+Recommended prompt patterns:
+
+* misconception diagnosis: choose the best correction to a plausible wrong claim
+* classification: identify ket, bra, scalar, operator, state, observable, or subsystem object
+* changed condition: reuse a familiar shape while changing a condition that invalidates the old shortcut
+* counterexample or generalization check: judge whether a character's broad claim is valid
+* first-step selection: choose the first useful move before calculation
+* equivalence judgment: decide when two expressions represent the same physical state
+* type judgment: ask what kind of mathematical object an expression produces
+* measurement interpretation: connect a formula to probability, expectation value, or observable meaning
+* commutator meaning: distinguish commutativity from equality or zero expectation value
+* partial trace / reduced-state judgment: distinguish whole-system and subsystem descriptions
+
+Wrong choices must be purposeful distractors, not random false statements. Prefer common misconceptions such as:
+
+* treating a bra as only a left-facing ket
+* forgetting complex conjugation
+* confusing inner product and outer product
+* confusing scalar and operator
+* confusing eigenstate and arbitrary state
+* confusing eigenvalue and expectation value
+* forgetting normalization
+* confusing basis representation and physical state
+* treating global phase as a physical difference
+* misunderstanding commutativity and simultaneous eigenstates
+* treating Hermitian as meaning every matrix element is real
+* reusing the previous method after a condition changes
+* confusing subsystem state with whole-system state
+* treating partial trace as merely deleting an unused label
+
+When the data format allows it, each choice may carry a design-only `distractor_reason` explaining the misconception.
+
+Prompt quality checklist:
+
+* one unique correct answer
+* solvable from the prompt text alone
+* options have the same type and granularity
+* wrong options map to concrete misconceptions
+* choices alone do not reveal the answer
+* no partly correct distractor unless the question explicitly asks for the best answer
+* avoid `all of the above` / `none of the above` by default
+* traps test reasoning, not decorative wording
+* calculation is short, but conceptual judgment is meaningful
+* pre-problem scenario does not leak the answer
+* explanation includes the needed formulas
+* `gate.answer` / `gate.answers` / `gate.options[].value` align with the prompt
+
+If prompt validity, answer uniqueness, or gate alignment is uncertain, Codex must stop and ask the user instead of silently rewriting the science.
+
+---
+
+## 16C. Explanation, Hint, And Answer Reveal Policy
+
+Explanations should correct misconceptions, not merely restate the answer. The default explanation order is:
+
+1. correct answer
+2. one-line takeaway
+3. formula check
+4. why the correct answer works
+5. why the other options fail
+6. common misconception
+7. connection to the scene joke, trap, or character reaction
+8. next point to watch
+
+Formula-backed explanations should be concise. Store formulas as LaTeX and render them later in the UI rather than showing raw source as final player-facing text.
+
+Future answer reveal should prevent player dead-ends without turning the game into a skip button. Use this learning flow:
+
+```text
+think first
+-> light hint
+-> character-specific hint
+-> one solution step
+-> answer reveal
+-> full explanation
+-> retry with a similar check
+```
+
+Future prompt data may add optional fields such as:
+
+```json
+{
+  "answer_reveal": {
+    "correct_option": "B",
+    "short_reason": "Taking the bra requires complex conjugation, so i becomes -i."
+  },
+  "explanation": {
+    "one_line": "A bra is a conjugate transpose, not only a left-facing ket.",
+    "formula": [
+      "\\[|\\psi\\rangle=\\frac{|0\\rangle+i|1\\rangle}{\\sqrt{2}}\\]",
+      "\\[\\langle\\psi|=\\frac{\\langle0|-i\\langle1|}{\\sqrt{2}}\\]"
+    ],
+    "why_correct": "Coefficients are complex-conjugated when converting ket to bra.",
+    "why_wrong": {
+      "A": "Forgets complex conjugation.",
+      "C": "Keeps the expression as a ket, so the type is wrong.",
+      "D": "Drops the coefficient structure."
+    },
+    "common_misconception": "Judging bra/ket only by visual direction.",
+    "story_callback": "Pays off a scene joke about trusting appearances too quickly.",
+    "next_focus": "Compare inner products with outer products."
+  },
+  "cleared_by": "solved | used_hint | revealed_answer"
+}
+```
+
+`cleared_by` is not a punishment marker. It records whether the player solved independently, used help, or revealed the answer so the notebook can keep the learning state honest.
+
+Hints must not be one generic shared line. Future prompt data should prefer `character_hints` over a single `teammate_whisper`, while keeping the old field as a fallback until the UI migrates.
+
 ---
 
 ## 17. Story and Prompt Connection
@@ -1312,6 +1459,7 @@ Supported regeneration targets:
 
 * `all`
 * `spec`
+* `update_prompt_answer_quality_spec`
 * `knowledge`
 * `story`
 * `story_japanese`

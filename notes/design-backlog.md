@@ -160,3 +160,116 @@ Recommended future targets:
 4. `regen_target: latex_rendering`
    * Add MathJax or equivalent local-compatible rendering for formulas.
    * Decide separately whether CDN or vendored offline assets are required.
+
+---
+
+## 7. Story Session Structure Design Check
+
+Recorded during `regen_target: story_session_structure`.
+
+Current structure inspected:
+
+* `generated/data/scenario.json`
+  * Session fields: `id`, `title`, `source_refs`, `opening_scene`, `official_briefing`, `mid_scene_reaction`, `rival_pressure_scene`, `breakthrough_scene`, `notebook_update`, `next_hook`.
+  * Scene lines are currently `{ speaker, text }`.
+* `generated/data/session-plan.json`
+  * Public-safe summary fields exist, but not the richer playable scene structure.
+* `generated/data/prompts.json`
+  * Prompt fields include `question`, `gate`, `open_question`, `model_answer`, `teammate_whisper`, `judge_criteria`, and `retry_policy`.
+* `generated/src/data.js`
+  * Embedded runtime data is synchronized with public JSON.
+  * Runtime `sessionPlan` is currently scenario-shaped, so future migrations must be careful.
+
+Enough for current MVP:
+
+* basic session title
+* source refs
+* short opening scene
+* official briefing
+* mid-scene and rival-pressure inserts
+* problem text and machine-graded gate
+* one generic hint line
+* model answer
+* judge criteria
+* notebook update
+
+Not enough for the new direction:
+
+* no dedicated `long_cold_open`
+* no `title_call`
+* no prompt-specific `pre_problem_banter`
+* no character-specific hints
+* no structured correct / incorrect answer feedback
+* no structured formula explanation field
+* no LaTeX render metadata
+* no prompt-quality audit result field
+
+Minimum proposed optional fields:
+
+* session-level:
+  * `long_cold_open`
+  * `title_call`
+* prompt-level:
+  * `pre_problem_banter`
+  * `problem_card`
+  * `character_hints`
+  * `answer_feedback`
+  * `formula_explanation`
+  * `quality_audit`
+
+Compatibility policy:
+
+* Add new fields as optional only.
+* Keep all current fields as fallbacks.
+* Do not rename or remove current fields until the UI is migrated.
+* Do not change gate machine values.
+* Apply migration one session at a time.
+* After editing generated JSON in a future target, sync `generated/src/data.js`.
+* Stop and ask the user if a prompt appears scientifically ambiguous or not aligned with its gate.
+
+Recommended next target:
+
+1. `regen_target: apply_story_session_structure_session_1`
+   * Add the optional fields for session 1 only.
+   * Use existing text as placeholders unless the user provides rewrite material.
+   * Do not implement UI.
+
+2. `regen_target: prompt_quality_session_1`
+   * Check session 1 prompt validity, answer uniqueness, and gate alignment.
+   * Stop on ambiguous science rather than silently rewriting.
+
+3. `regen_target: adv_ui_schema_support`
+   * Render the optional fields in an ADV-like UI.
+   * Do not change scenario prose during this target.
+
+---
+
+## 8. Prompt Answer Quality Spec Update
+
+Promoted during `regen_target: update_prompt_answer_quality_spec`:
+
+* Gate prompts should become strong single-answer four-option questions by default, not thin vocabulary checks.
+* Strong prompts should compress upper-level physics or entrance-exam style reasoning into one trap-bearing decision.
+* External and textbook references may inform concept, misconception, and algebra depth, but exact wording, values, and settings must not be copied.
+* Distractors should correspond to common misconceptions and may later carry `distractor_reason`.
+* Explanations should be misconception correction: answer, one-line takeaway, formula check, why correct, why wrong, common misconception, story callback, and next focus.
+* Future answer reveal should move through hint, character-specific hint, one solution step, answer reveal, full explanation, and retry.
+* Future progress state may track `cleared_by` as learning state, not punishment.
+
+Still backlog, not implemented yet:
+
+* Audit existing generated prompts for answer uniqueness, gate alignment, meaningful distractors, and solvability from prompt text alone.
+* Add optional `distractor_reason`, `answer_reveal`, structured `explanation`, `character_hints`, and `cleared_by` fields to generated prompt data one session at a time.
+* Keep old fields as fallbacks until the UI supports the richer schema.
+* Add answer reveal UI and notebook tracking.
+* Render LaTeX with MathJax or a local-compatible renderer.
+* Rewrite weak prompts only in a future generated-data target after user approval if scientific correctness is unclear.
+
+Recommended future targets:
+
+1. `regen_target: prompt_quality_session_1`
+   * Audit existing session 1 prompts without rewriting uncertain science.
+2. `regen_target: prompt_schema_session_1`
+   * Add optional hint, distractor, reveal, and explanation fields for session 1.
+3. `regen_target: latex_rendering`
+   * Render formulas in UI without changing scenario or prompt content.

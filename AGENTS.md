@@ -23,6 +23,16 @@ For `regen_target: update_story_ui_design_spec_from_feedback`, edit documentatio
 
 Do not edit `generated/`, `characters/`, `assets/`, `source/textbook.pdf`, or sealed artifacts during that target.
 
+
+For `regen_target: update_prompt_answer_quality_spec`, edit documentation only:
+
+* `spec.md`
+* `docs/workflow.md`
+* `notes/design-backlog.md`
+* `AGENTS.md`
+
+Do not edit `generated/`, prompt body data, scenario text, UI implementation files, `characters/`, `assets/`, `source/textbook.pdf`, or sealed artifacts during that target. Document prompt-quality policy only. If actual prompt correctness, unique-answer judgment, or gate alignment is uncertain, stop and ask instead of rewriting the science.
+
 Stop instead of continuing autonomously when:
 
 * existing structure does not clearly match the requested target

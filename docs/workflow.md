@@ -441,6 +441,7 @@ Possible values:
 all
 spec
 update_story_ui_design_spec_from_feedback
+update_prompt_answer_quality_spec
 knowledge
 story
 story_japanese
@@ -469,6 +470,8 @@ Target scopes:
 | --- | --- | --- |
 | `spec` | `spec.md`, `docs/workflow.md`, `notes/design-backlog.md`, `AGENTS.md` | `generated/`, `characters/`, `assets/`, `source/textbook.pdf` |
 | `update_story_ui_design_spec_from_feedback` | `spec.md`, `docs/workflow.md`, `notes/design-backlog.md`, `AGENTS.md` | `generated/`, `characters/`, `assets/`, `source/textbook.pdf`, sealed artifacts |
+| `update_prompt_answer_quality_spec` | `spec.md`, `docs/workflow.md`, `notes/design-backlog.md`, `AGENTS.md` | `generated/`, `characters/`, `assets/`, `source/textbook.pdf`, sealed artifacts, prompt body data, UI implementation |
+| `story_session_structure` | `docs/workflow.md`, `notes/design-backlog.md`, and `spec.md` only if the field proposal must become normative | `generated/`, `characters/`, `assets/`, `source/textbook.pdf`, sealed artifacts, UI implementation |
 | `knowledge` | `generated/data/knowledge-map.json`, `generated/data/source-refs.json`, public-review coverage, generation log | browser app files, scenario prose, assets, character art |
 | `story_japanese` | `generated/data/scenario.json`, `generated/data/session-plan.json`, `generated/data/prompts.json`, synced embedded data only if needed | PDF extraction, image assets, browser implementation rewrites, sealed spoilers in normal report |
 | `character_ui` | character profile fields, `generated/data/characters.json`, UI code and CSS needed for the profile screen | story regeneration, PDF rereading, image generation |
@@ -519,6 +522,172 @@ Regenerate images and asset manifests.
 ```
 
 Regenerate browser app code while preserving data.
+
+---
+
+## 14A. Story Session Structure Planning
+
+Use `regen_target: story_session_structure` to inspect the current public data shape and propose the smallest compatible schema additions for richer story sessions.
+
+This target is planning-only unless the user explicitly asks to apply a migration. Do not edit `generated/` during this target.
+
+Current public data shape:
+
+* `generated/data/scenario.json`
+  * Stores session `title`, `source_refs`, `opening_scene`, `official_briefing`, `mid_scene_reaction`, `rival_pressure_scene`, `breakthrough_scene`, `notebook_update`, and `next_hook`.
+  * Scene lines currently use `{ speaker, text }`.
+* `generated/data/prompts.json`
+  * Stores prompt `round`, `stage_label`, `question`, `gate`, `open_question`, `model_answer`, `teammate_whisper`, `judge_criteria`, and `retry_policy`.
+* `generated/data/session-plan.json`
+  * Stores public-safe session summaries, prompt counts, drama beat ids, and safe inheritance progress.
+* `generated/src/data.js`
+  * Embeds runtime data.
+  * Current runtime uses a scenario-shaped `sessionPlan` object, so future generated-data changes must keep `data.js` synchronized carefully.
+
+Existing fields can cover:
+
+* short opening scene
+* official briefing
+* simple problem card through `question` and `gate`
+* one generic hint through `teammate_whisper`
+* model answer and judge criteria
+* notebook update
+
+Existing fields do not cleanly cover:
+
+* 800-1500 character long cold open
+* title call with round, opponent school, and theme
+* prompt-specific pre-problem banter
+* character-specific hints
+* separate correct / incorrect feedback
+* concise formula explanation as structured LaTeX plus prose
+* MathJax rendering metadata
+* prompt-quality audit status
+
+Minimum compatible field proposal:
+
+```json
+{
+  "sessions": [
+    {
+      "id": "session_01",
+      "long_cold_open": {
+        "setting": "venue | clubroom | waiting_room | hallway | transit",
+        "lines": [{ "speaker": "narration", "text": "..." }],
+        "comedy_beat": "...",
+        "character_focus": ["haru", "rikka"],
+        "transition_to_problem": "..."
+      },
+      "title_call": {
+        "round": "...",
+        "opponent_school": "...",
+        "theme": "...",
+        "display_title": "..."
+      }
+    }
+  ]
+}
+```
+
+```json
+{
+  "prompts": [
+    {
+      "id": "p01_ket",
+      "pre_problem_banter": [
+        { "speaker": "haru", "text": "..." }
+      ],
+      "problem_card": {
+        "stem": "...",
+        "latex": ["\\( ... \\)"],
+        "display_note": "Render LaTeX in UI"
+      },
+      "character_hints": [
+        { "character_id": "haru", "speaker": "Haru", "text": "...", "tone": "honest_confusion" },
+        { "character_id": "rikka", "speaker": "Rikka", "text": "...", "tone": "sharp" },
+        { "character_id": "sayo", "speaker": "Sayo", "text": "...", "tone": "soft_question" },
+        { "character_id": "minori", "speaker": "Minori", "text": "...", "tone": "strict_warning" }
+      ],
+      "answer_feedback": {
+        "correct": {
+          "speaker": "haru",
+          "text": "...",
+          "formula_explanation": { "latex": "\\( ... \\)", "plain_text": "..." }
+        },
+        "incorrect": [
+          { "speaker": "minori", "text": "...", "mistake": "...", "reason": "..." }
+        ]
+      }
+    }
+  ]
+}
+```
+
+Compatibility rules:
+
+* Add fields as optional.
+* Do not remove or rename existing fields.
+* Keep `question`, `gate`, `open_question`, `model_answer`, `teammate_whisper`, and `judge_criteria` as fallbacks until the UI supports the richer fields.
+* Do not change `id`, `session_id`, `source_refs`, `gate.type`, `gate.answer`, `gate.answers`, or `gate.options[].value`.
+* Update `generated/src/data.js` only during a future apply target that edits generated data.
+* If prompt validity or answer alignment is unclear, stop and ask the user.
+
+Recommended next implementation targets:
+
+1. `regen_target: apply_story_session_structure_session_1`
+   * Add optional session and prompt structure fields for session 1 only.
+   * Do not rewrite all sessions.
+2. `regen_target: prompt_quality_session_1`
+   * Audit whether each session 1 prompt is solvable, unique, and aligned with its gate.
+3. `regen_target: adv_ui_schema_support`
+   * Teach the browser app to display the optional new fields, without changing story text.
+
+---
+
+## 14B. Prompt And Answer Quality Spec Updates
+
+Use `regen_target: update_prompt_answer_quality_spec` to update only the prompt, answer, hint, and explanation policies in documentation.
+
+This target may document future data fields, but it must not edit `generated/`, rewrite prompt bodies, judge existing prompt correctness, implement answer reveal, or implement LaTeX rendering.
+
+Prompt design rule:
+
+```text
+public reference pattern -> abstract misconception or first-step trap -> original four-choice prompt -> formula-backed short explanation -> character reaction
+```
+
+The prompt may be inspired by public graduate entrance exams, physics qualifying exams, concept-inventory research, standard textbook problems, lecture notes, or `source/textbook.pdf`, but only at the abstract design level. Do not copy external wording, values, or distinctive settings.
+
+For future generated data, consider these optional fields one session at a time:
+
+* `gate.options[].distractor_reason`
+* `character_hints`
+* `answer_reveal`
+* `explanation.one_line`
+* `explanation.formula`
+* `explanation.why_correct`
+* `explanation.why_wrong`
+* `explanation.common_misconception`
+* `explanation.story_callback`
+* `explanation.next_focus`
+* `cleared_by`
+
+Compatibility rules:
+
+* Keep existing `question`, `gate`, `open_question`, `model_answer`, `teammate_whisper`, `judge_criteria`, and `retry_policy` until the runtime migrates.
+* Do not change `gate.answer`, `gate.answers`, or `gate.options[].value` in a documentation-only target.
+* Stop and ask if a prompt's science correctness, unique answer, or gate alignment is uncertain.
+
+Recommended next implementation targets:
+
+1. `regen_target: prompt_quality_session_1`
+   * Audit session 1 prompts for unique answer, gate alignment, meaningful distractors, and formula-backed explanation needs.
+   * Stop on ambiguous science.
+2. `regen_target: prompt_schema_session_1`
+   * Add optional distractor, hint, reveal, and explanation fields for session 1 only.
+   * Sync `generated/src/data.js` only in that future generated-data target.
+3. `regen_target: latex_rendering`
+   * Render stored LaTeX in the browser UI without changing prompt science.
 
 ---
 
