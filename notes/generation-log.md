@@ -51,3 +51,12 @@ Generated: 2026-06-18
 - Verified required generated files are present and JSON files parse.
 - Added Chapter 7 source grounding, session_01 Transfer prompt, prompt-specific open drafts, clean retry, and public spoiler redactions.
 - Browser plugin had no available in-app browser instance during this pass; JS modules were loaded through the local JS runtime instead.
+
+## Apply Story Japanese Session 1 Pass
+
+- configuration: `regen_target: apply_story_japanese_session_1`
+- Applied the prepared rewrite from `notes/workpacks/story_japanese_session_1_rewrite.md` to session 1 public scenario text and the seven session 1 prompts only.
+- Preserved prompt ids, session ids, source refs, gate types, machine-graded answers, and option values.
+- Synced `generated/src/data.js` after the JSON updates.
+- Verified JSON parsing and checked the edited public/runtime files for accidental `?????` replacement.
+- Did not use Browser Agent, browser automation, subagents, image generation, PDF rereading, sealed artifacts, or session 2+ rewriting.

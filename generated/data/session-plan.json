@@ -30,11 +30,11 @@
         "Next Hook"
       ],
       "official_briefing_safe": {
-        "topic": "state vectors, operators, and density operators",
-        "what_not_to_assume": "Do not treat non-commuting operators like ordinary algebraic variables."
+        "topic": "量子力学の基本言語",
+        "what_not_to_assume": "特に、交換しない演算子を、普通の文字式のように扱わないこと"
       },
       "prompt_count": 7,
-      "drama_safe_summary": "Seiran's captain smiles at the oscillator board as if the next round has already begun.",
+      "drama_safe_summary": "最初のラウンドが終わっても、青藍の席はまだ静かだった。\n\n私は水を飲もうとして、手を止めた。\n\n青藍の主将が、次のボードを見ていた。\n調和振動子。\n黒板に並ぶ、見慣れたようで見慣れない記号。\n\n彼女は、もう次の試合が始まっているみたいに笑った。\n\n立花が、小さく舌打ちした。\n\n「……来るよ。順番を間違えたら終わるやつ」\n\n私はノートを閉じなかった。\n\nまだ怖い。\nでも、次のページは白紙のままにしたくなかった。",
       "drama_beat_ids": [
         "db_01",
         "db_02",
@@ -43,7 +43,7 @@
       "featured_rival_schools_safe": [
         "seiran"
       ],
-      "inheritance_progress_safe": "The team begins turning basic questions into a shared standard."
+      "inheritance_progress_safe": "私はノートの新しい行に、ゆっくり書いた。\n\nまず、空間の名前。\n次に、基底の名前。\nそれから、その演算子が何をしてよいのか。\n\n書いてから、少しだけ線を太くした。\n\n焦ったら、答えの形だけを見る。\n落ち着いたら、記号のいる場所を見る。\n\n私は後者を選べるようになりたいと思った。"
     },
     {
       "id": "session_02",

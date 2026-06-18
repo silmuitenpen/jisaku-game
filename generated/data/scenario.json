@@ -31,55 +31,147 @@
       "opening_scene": [
         {
           "speaker": "narration",
-          "text": "The regional hall smelled like chalk dust, polished floor wax, and the kind of silence that made every page turn sound official."
+          "text": "地方予選の会場は、思っていたよりずっと静かだった。\n\n磨かれた床の匂い。\n黒板のチョークの粉。\nページをめくる音まで、審査されているみたいに響く。\n\n私は、膝の上で手を握った。\n\n前の席の制服。横に並ぶ名札。知らない学校の視線。\nどれも、私たちより先に答えを知っているように見えた。"
         },
         {
-          "speaker": "haru",
-          "text": "If I do not understand the notation, I am going to say so. Even if everyone hears me."
+          "speaker": "ハル",
+          "text": "「……私、記号の意味が分からなかったら、ちゃんと言う」"
         },
         {
-          "speaker": "minori",
-          "text": "Good. A wrong silence costs more than a wrong answer."
+          "speaker": "narration",
+          "text": "声に出した瞬間、喉が少しだけ震えた。\nでも、飲み込まなかった。"
+        },
+        {
+          "speaker": "ハル",
+          "text": "「みんなに聞こえても、言う」"
+        },
+        {
+          "speaker": "narration",
+          "text": "実里先輩は、こちらを見ずに小さくうなずいた。"
+        },
+        {
+          "speaker": "ミノリ",
+          "text": "「いいよ」"
+        },
+        {
+          "speaker": "narration",
+          "text": "柔らかい声だった。\nけれど、その次の言葉だけ、少し硬かった。"
+        },
+        {
+          "speaker": "ミノリ",
+          "text": "「間違った沈黙のほうが、間違った答えより高くつくから」"
         }
       ],
       "official_briefing": {
-        "speaker": "Senior Examiner",
-        "topic": "state vectors, operators, and density operators",
-        "text": "This foundation round tests the language of quantum mechanics: vector spaces, basis expansion, observables as operators, oscillator algebra, and density operators. Do not assume a symbol is a number just because it fits on one line. Ask what space it acts on, what basis is being used, and whether a subsystem has been separated from something unobserved.",
-        "what_not_to_assume": "Do not treat non-commuting operators like ordinary algebraic variables."
+        "speaker": "審査主任",
+        "topic": "量子力学の基本言語",
+        "text": "正面のスクリーンに、最初のラウンド名が映った。\n\n基礎ラウンド。\n量子力学の言葉。\n\n会場の空気が、半音だけ低くなる。\n\n審査主任がマイクの前に立った。\n\n「本ラウンドでは、量子力学の基本言語を問います」\n\n声は淡々としていた。\nだからこそ、一語ずつ重かった。\n\n「状態ベクトル、基底展開、観測量としての演算子、調和振動子の代数、密度演算子。いずれも、計算以前に、記号が何を表しているかを見極める問題です」\n\n私はノートの端に、急いで単語だけを書き取った。\n\n状態。\n基底。\n演算子。\n密度。\n\n「一行に収まっているからといって、その記号をただの数だと思わないこと」\n\nペン先が止まった。\n\n「それはどの空間に作用するのか。どの基底で書かれているのか。見ていない部分系を切り離してよいのか。必ず確認してください」\n\n審査主任は、少し間を置いた。\n\n「特に、交換しない演算子を、普通の文字式のように扱わないこと」\n\nその一言で、隣の立花が顔を上げた。\n\n私はまだ、何を見落とすのか分からなかった。\nでも、見落としたら負ける場所に来てしまったことだけは分かった。",
+        "what_not_to_assume": "特に、交換しない演算子を、普通の文字式のように扱わないこと"
       },
       "mid_scene_reaction": [
         {
-          "speaker": "rikka",
-          "text": "The answer is short. The missing reason is not."
+          "speaker": "narration",
+          "text": "解答欄に入れる言葉は、思ったより短かった。\n\n短い。\nだから、怖い。\n\n立花が画面を見たまま、早口で言った。"
         },
         {
-          "speaker": "haru",
-          "text": "Then I want the reason. If we cannot say it, we do not have it yet."
+          "speaker": "立花",
+          "text": "「答えは短い。でも、足りない理由は短くない」"
+        },
+        {
+          "speaker": "narration",
+          "text": "私は、消しゴムを握ったままうなずいた。\n\nたぶん、ここで名前だけ入れれば、ゲートは開く。\nでも、それだけで進んだら、次で落ちる気がした。"
+        },
+        {
+          "speaker": "ハル",
+          "text": "「じゃあ……理由がほしい」"
+        },
+        {
+          "speaker": "narration",
+          "text": "自分の声は小さかった。\nでも、隣の実里先輩には届いた。"
+        },
+        {
+          "speaker": "ハル",
+          "text": "「私たちが説明できないなら、まだ持ってないってことだよね」"
+        },
+        {
+          "speaker": "narration",
+          "text": "立花のペンが、一度だけ止まった。"
+        },
+        {
+          "speaker": "立花",
+          "text": "「……そう。今のは、いい止まり方」"
         }
       ],
       "rival_pressure_scene": [
         {
-          "speaker": "natsuki",
-          "text": "Sakuraba is slower this year."
+          "speaker": "narration",
+          "text": "隣のブロックから、低い声が聞こえた。"
         },
         {
-          "speaker": "minori",
-          "text": "Sakuraba is naming its assumptions this year."
+          "speaker": "ナツキ",
+          "text": "「桜庭、今年は遅いね」"
+        },
+        {
+          "speaker": "narration",
+          "text": "青藍の名札。\n夏希さんだった。\n\n笑っているように見えた。\nでも、目は問題画面から離れていない。\n\n私は思わず肩に力を入れた。\n遅い。\nその言葉だけで、会場の時計の音が近くなる。\n\n実里先輩は、画面に視線を戻したまま答えた。"
+        },
+        {
+          "speaker": "ミノリ",
+          "text": "「今年の桜庭は、仮定に名前をつけてるの」"
+        },
+        {
+          "speaker": "narration",
+          "text": "静かな声だった。\n\n夏希さんは、すぐには返さなかった。\nペン先だけが、机の上で短く鳴った。\n\n私は息を吸った。\n遅いのかもしれない。\nでも、何を置いたまま走るかは、まだ決めたくなかった。"
         }
       ],
       "breakthrough_scene": [
         {
-          "speaker": "haru",
-          "text": "A state is not just an answer waiting to be read. It is a promise about what measurements can mean."
+          "speaker": "narration",
+          "text": "ゲートが開いた音がした。\n\n会場のざわめきが、少し遅れて戻ってくる。\n私は画面から目を離せなかった。\n\n答えは、ただの単語だった。\nでも、その単語の後ろに、急に広い場所が見えた気がした。"
         },
         {
-          "speaker": "sayo",
-          "text": "That is the first page of the notebook I wanted to leave behind."
+          "speaker": "ハル",
+          "text": "「状態って……」"
+        },
+        {
+          "speaker": "narration",
+          "text": "私はノートを見下ろした。"
+        },
+        {
+          "speaker": "ハル",
+          "text": "「読めば答えが出てくる札、みたいなものじゃないんだね」"
+        },
+        {
+          "speaker": "narration",
+          "text": "誰も急かさなかった。"
+        },
+        {
+          "speaker": "ハル",
+          "text": "「どんな測定なら、何が言えるのか。その約束、みたいなものなんだ」"
+        },
+        {
+          "speaker": "narration",
+          "text": "言い終えてから、少し恥ずかしくなった。\nうまく言えた自信はなかった。\n\n佐代先輩が、私のノートを見た。"
+        },
+        {
+          "speaker": "サヨ",
+          "text": "「それでいい」"
+        },
+        {
+          "speaker": "narration",
+          "text": "その声は、とても静かだった。"
+        },
+        {
+          "speaker": "narration",
+          "text": "「私が残したかったノートの、一ページ目はそこだから」"
+        },
+        {
+          "speaker": "narration",
+          "text": "私はもう一度、ペンを持ち直した。"
         }
       ],
-      "notebook_update": "Haru writes: name the space, then the basis, then what the operator is allowed to do.",
-      "next_hook": "Seiran's captain smiles at the oscillator board as if the next round has already begun."
+      "notebook_update": "私はノートの新しい行に、ゆっくり書いた。\n\nまず、空間の名前。\n次に、基底の名前。\nそれから、その演算子が何をしてよいのか。\n\n書いてから、少しだけ線を太くした。\n\n焦ったら、答えの形だけを見る。\n落ち着いたら、記号のいる場所を見る。\n\n私は後者を選べるようになりたいと思った。",
+      "next_hook": "最初のラウンドが終わっても、青藍の席はまだ静かだった。\n\n私は水を飲もうとして、手を止めた。\n\n青藍の主将が、次のボードを見ていた。\n調和振動子。\n黒板に並ぶ、見慣れたようで見慣れない記号。\n\n彼女は、もう次の試合が始まっているみたいに笑った。\n\n立花が、小さく舌打ちした。\n\n「……来るよ。順番を間違えたら終わるやつ」\n\n私はノートを閉じなかった。\n\nまだ怖い。\nでも、次のページは白紙のままにしたくなかった。"
     },
     {
       "id": "session_02",

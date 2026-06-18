@@ -1007,55 +1007,147 @@ window.SCIO_DATA = {
         "opening_scene": [
           {
             "speaker": "narration",
-            "text": "The regional hall smelled like chalk dust, polished floor wax, and the kind of silence that made every page turn sound official."
+            "text": "地方予選の会場は、思っていたよりずっと静かだった。\n\n磨かれた床の匂い。\n黒板のチョークの粉。\nページをめくる音まで、審査されているみたいに響く。\n\n私は、膝の上で手を握った。\n\n前の席の制服。横に並ぶ名札。知らない学校の視線。\nどれも、私たちより先に答えを知っているように見えた。"
           },
           {
-            "speaker": "haru",
-            "text": "If I do not understand the notation, I am going to say so. Even if everyone hears me."
+            "speaker": "ハル",
+            "text": "「……私、記号の意味が分からなかったら、ちゃんと言う」"
           },
           {
-            "speaker": "minori",
-            "text": "Good. A wrong silence costs more than a wrong answer."
+            "speaker": "narration",
+            "text": "声に出した瞬間、喉が少しだけ震えた。\nでも、飲み込まなかった。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「みんなに聞こえても、言う」"
+          },
+          {
+            "speaker": "narration",
+            "text": "実里先輩は、こちらを見ずに小さくうなずいた。"
+          },
+          {
+            "speaker": "ミノリ",
+            "text": "「いいよ」"
+          },
+          {
+            "speaker": "narration",
+            "text": "柔らかい声だった。\nけれど、その次の言葉だけ、少し硬かった。"
+          },
+          {
+            "speaker": "ミノリ",
+            "text": "「間違った沈黙のほうが、間違った答えより高くつくから」"
           }
         ],
         "official_briefing": {
-          "speaker": "Senior Examiner",
-          "topic": "state vectors, operators, and density operators",
-          "text": "This foundation round tests the language of quantum mechanics: vector spaces, basis expansion, observables as operators, oscillator algebra, and density operators. Do not assume a symbol is a number just because it fits on one line. Ask what space it acts on, what basis is being used, and whether a subsystem has been separated from something unobserved.",
-          "what_not_to_assume": "Do not treat non-commuting operators like ordinary algebraic variables."
+          "speaker": "審査主任",
+          "topic": "量子力学の基本言語",
+          "text": "正面のスクリーンに、最初のラウンド名が映った。\n\n基礎ラウンド。\n量子力学の言葉。\n\n会場の空気が、半音だけ低くなる。\n\n審査主任がマイクの前に立った。\n\n「本ラウンドでは、量子力学の基本言語を問います」\n\n声は淡々としていた。\nだからこそ、一語ずつ重かった。\n\n「状態ベクトル、基底展開、観測量としての演算子、調和振動子の代数、密度演算子。いずれも、計算以前に、記号が何を表しているかを見極める問題です」\n\n私はノートの端に、急いで単語だけを書き取った。\n\n状態。\n基底。\n演算子。\n密度。\n\n「一行に収まっているからといって、その記号をただの数だと思わないこと」\n\nペン先が止まった。\n\n「それはどの空間に作用するのか。どの基底で書かれているのか。見ていない部分系を切り離してよいのか。必ず確認してください」\n\n審査主任は、少し間を置いた。\n\n「特に、交換しない演算子を、普通の文字式のように扱わないこと」\n\nその一言で、隣の立花が顔を上げた。\n\n私はまだ、何を見落とすのか分からなかった。\nでも、見落としたら負ける場所に来てしまったことだけは分かった。",
+          "what_not_to_assume": "特に、交換しない演算子を、普通の文字式のように扱わないこと"
         },
         "mid_scene_reaction": [
           {
-            "speaker": "rikka",
-            "text": "The answer is short. The missing reason is not."
+            "speaker": "narration",
+            "text": "解答欄に入れる言葉は、思ったより短かった。\n\n短い。\nだから、怖い。\n\n立花が画面を見たまま、早口で言った。"
           },
           {
-            "speaker": "haru",
-            "text": "Then I want the reason. If we cannot say it, we do not have it yet."
+            "speaker": "立花",
+            "text": "「答えは短い。でも、足りない理由は短くない」"
+          },
+          {
+            "speaker": "narration",
+            "text": "私は、消しゴムを握ったままうなずいた。\n\nたぶん、ここで名前だけ入れれば、ゲートは開く。\nでも、それだけで進んだら、次で落ちる気がした。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「じゃあ……理由がほしい」"
+          },
+          {
+            "speaker": "narration",
+            "text": "自分の声は小さかった。\nでも、隣の実里先輩には届いた。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「私たちが説明できないなら、まだ持ってないってことだよね」"
+          },
+          {
+            "speaker": "narration",
+            "text": "立花のペンが、一度だけ止まった。"
+          },
+          {
+            "speaker": "立花",
+            "text": "「……そう。今のは、いい止まり方」"
           }
         ],
         "rival_pressure_scene": [
           {
-            "speaker": "natsuki",
-            "text": "Sakuraba is slower this year."
+            "speaker": "narration",
+            "text": "隣のブロックから、低い声が聞こえた。"
           },
           {
-            "speaker": "minori",
-            "text": "Sakuraba is naming its assumptions this year."
+            "speaker": "ナツキ",
+            "text": "「桜庭、今年は遅いね」"
+          },
+          {
+            "speaker": "narration",
+            "text": "青藍の名札。\n夏希さんだった。\n\n笑っているように見えた。\nでも、目は問題画面から離れていない。\n\n私は思わず肩に力を入れた。\n遅い。\nその言葉だけで、会場の時計の音が近くなる。\n\n実里先輩は、画面に視線を戻したまま答えた。"
+          },
+          {
+            "speaker": "ミノリ",
+            "text": "「今年の桜庭は、仮定に名前をつけてるの」"
+          },
+          {
+            "speaker": "narration",
+            "text": "静かな声だった。\n\n夏希さんは、すぐには返さなかった。\nペン先だけが、机の上で短く鳴った。\n\n私は息を吸った。\n遅いのかもしれない。\nでも、何を置いたまま走るかは、まだ決めたくなかった。"
           }
         ],
         "breakthrough_scene": [
           {
-            "speaker": "haru",
-            "text": "A state is not just an answer waiting to be read. It is a promise about what measurements can mean."
+            "speaker": "narration",
+            "text": "ゲートが開いた音がした。\n\n会場のざわめきが、少し遅れて戻ってくる。\n私は画面から目を離せなかった。\n\n答えは、ただの単語だった。\nでも、その単語の後ろに、急に広い場所が見えた気がした。"
           },
           {
-            "speaker": "sayo",
-            "text": "That is the first page of the notebook I wanted to leave behind."
+            "speaker": "ハル",
+            "text": "「状態って……」"
+          },
+          {
+            "speaker": "narration",
+            "text": "私はノートを見下ろした。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「読めば答えが出てくる札、みたいなものじゃないんだね」"
+          },
+          {
+            "speaker": "narration",
+            "text": "誰も急かさなかった。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「どんな測定なら、何が言えるのか。その約束、みたいなものなんだ」"
+          },
+          {
+            "speaker": "narration",
+            "text": "言い終えてから、少し恥ずかしくなった。\nうまく言えた自信はなかった。\n\n佐代先輩が、私のノートを見た。"
+          },
+          {
+            "speaker": "サヨ",
+            "text": "「それでいい」"
+          },
+          {
+            "speaker": "narration",
+            "text": "その声は、とても静かだった。"
+          },
+          {
+            "speaker": "narration",
+            "text": "「私が残したかったノートの、一ページ目はそこだから」"
+          },
+          {
+            "speaker": "narration",
+            "text": "私はもう一度、ペンを持ち直した。"
           }
         ],
-        "notebook_update": "Haru writes: name the space, then the basis, then what the operator is allowed to do.",
-        "next_hook": "Seiran's captain smiles at the oscillator board as if the next round has already begun."
+        "notebook_update": "私はノートの新しい行に、ゆっくり書いた。\n\nまず、空間の名前。\n次に、基底の名前。\nそれから、その演算子が何をしてよいのか。\n\n書いてから、少しだけ線を太くした。\n\n焦ったら、答えの形だけを見る。\n落ち着いたら、記号のいる場所を見る。\n\n私は後者を選べるようになりたいと思った。",
+        "next_hook": "最初のラウンドが終わっても、青藍の席はまだ静かだった。\n\n私は水を飲もうとして、手を止めた。\n\n青藍の主将が、次のボードを見ていた。\n調和振動子。\n黒板に並ぶ、見慣れたようで見慣れない記号。\n\n彼女は、もう次の試合が始まっているみたいに笑った。\n\n立花が、小さく舌打ちした。\n\n「……来るよ。順番を間違えたら終わるやつ」\n\n私はノートを閉じなかった。\n\nまだ怖い。\nでも、次のページは白紙のままにしたくなかった。"
       },
       {
         "id": "session_02",
@@ -1303,13 +1395,13 @@ window.SCIO_DATA = {
       {
         "id": "p01_ket",
         "session_id": "session_01",
-        "round": "Foundation Round",
-        "stage_label": "Quick Problem",
+        "round": "基礎ラウンド",
+        "stage_label": "クイック問題",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_framework"
         ],
-        "question": "In Dirac notation, |psi> is called what kind of vector?",
+        "question": "ディラック記法で (|\\psi\\rangle) と書かれるものは、何ベクトルと呼ばれるか。",
         "gate": {
           "type": "term_blank",
           "answers": [
@@ -1317,47 +1409,48 @@ window.SCIO_DATA = {
             "ket vector"
           ]
         },
-        "open_question": "Explain why the ket alone is not yet a measurement result.",
-        "model_answer": "A ket represents a state vector in the system's Hilbert space. Measurement results come from observables and probabilities, not from the symbol alone.",
-        "teammate_whisper": "Haru whispers: start with the name before the meaning.",
+        "open_question": "なぜ、ケットだけではまだ「測定結果」とは言えないのか。状態を表すことと、測定で値が出ることを分けて説明せよ。",
+        "model_answer": "ケットは、系のヒルベルト空間（Hilbert space）に属する状態ベクトル（state vector）を表す。測定結果は、観測量（observable）に対応する演算子と、その測定確率によって語られるものであり、(|\\psi\\rangle) という記号だけがそのまま測定値を表すわけではない。",
+        "teammate_whisper": "春が小さく言う。「まず名前。意味は、そのあと逃がさなければいい」",
         "judge_criteria": [
-          "Names ket correctly",
-          "Separates state representation from measurement outcome"
+          "ケットを正しく状態ベクトルとして名づけている。",
+          "状態の表現と測定結果を区別している。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p02_hermitian",
         "session_id": "session_01",
-        "round": "Foundation Round",
-        "stage_label": "Quick Problem",
+        "round": "基礎ラウンド",
+        "stage_label": "クイック問題",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_framework"
         ],
-        "question": "True or false: Hermitian operators representing observables have real eigenvalues.",
+        "question": "真か偽か。観測量を表すエルミート演算子（Hermitian operator）の固有値は実数である。",
         "gate": {
           "type": "true_false",
           "answer": true
         },
-        "open_question": "Why does the story care that observables are Hermitian?",
-        "model_answer": "Real eigenvalues allow operator eigenvalues to represent possible measurement outcomes. That is why the formal condition matters physically.",
-        "teammate_whisper": "Minori taps the desk: possible result, not pretty notation.",
+        "open_question": "物語上、このラウンドはなぜ「観測量がエルミートであること」にこだわっているのか。形式的な条件と、測定で得られる値の関係を説明せよ。",
+        "model_answer": "エルミート演算子の固有値は実数であり、実際の測定で得られる可能な値として解釈できる。したがって、エルミート性は単なる記法上の美しさではなく、観測量が物理的な測定結果を表すための条件になっている。",
+        "teammate_whisper": "実里先輩が机を軽く叩く。「きれいな式かどうかじゃない。測って出てきて困らない値かどうか」",
         "judge_criteria": [
-          "Connects Hermitian property to real outcomes"
+          "エルミート性と固有値が実数であることを結びつけている。",
+          "実数の固有値が測定結果として解釈されることを説明している。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p03_commutator",
         "session_id": "session_01",
-        "round": "Foundation Round",
-        "stage_label": "Formula Blank",
+        "round": "基礎ラウンド",
+        "stage_label": "式の空欄補充",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_oscillator"
         ],
-        "question": "Fill the oscillator algebra blank: [a, a^dagger] = __.",
+        "question": "調和振動子の代数で、次の空欄を埋めよ。\n\n[\n[a, a^\\dagger] = __\n]",
         "gate": {
           "type": "formula_blank",
           "answers": [
@@ -1366,49 +1459,50 @@ window.SCIO_DATA = {
             "identity"
           ]
         },
-        "open_question": "What does this commutator warn you not to do?",
-        "model_answer": "It warns that the ladder operators do not commute like ordinary numbers; changing order changes the result and the state ladder.",
-        "teammate_whisper": "Rikka says too quickly: order is part of the answer.",
+        "open_question": "この交換関係は、どんな早合点をしてはいけないと警告しているのか。演算子の順序に注目して説明せよ。",
+        "model_answer": "交換関係は ([a, a^\\dagger] = 1) である。これは、消滅演算子 (a) と生成演算子 (a^\\dagger) が普通の数のようには交換しないことを示している。順序を入れ替えると結果が変わり、状態の階段構造にも影響するため、演算子を通常の代数変数のように扱ってはいけない。",
+        "teammate_whisper": "立花が早口で言う。「順番を落とさないで。そこ、答えの一部だから」",
         "judge_criteria": [
-          "Gives the commutator",
-          "Explains non-commuting order"
+          "正しい交換関係を答えている。",
+          "非可換性、つまり演算子の順序が意味を持つことを説明している。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p04_ground_energy",
         "session_id": "session_01",
-        "round": "Foundation Round",
-        "stage_label": "Numeric Gate",
+        "round": "基礎ラウンド",
+        "stage_label": "数値ゲート",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_oscillator"
         ],
-        "question": "For the harmonic oscillator, the ground-state energy is what number times hbar omega?",
+        "question": "調和振動子の基底状態エネルギーは、(\\hbar\\omega) の何倍か。",
         "gate": {
           "type": "numeric",
           "answer": 0.5,
           "tolerance": 0.001
         },
-        "open_question": "Why is the ground state not zero energy in this model?",
-        "model_answer": "The oscillator spectrum is hbar omega (n + 1/2), so even n=0 has zero-point energy, tied to the quantum operator structure.",
-        "teammate_whisper": "Sayo: the quietest state still has structure.",
+        "open_question": "この模型で、基底状態のエネルギーがゼロにならないのはなぜか。エネルギースペクトルと量子構造に触れて説明せよ。",
+        "model_answer": "量子調和振動子のエネルギースペクトルは (\\hbar\\omega(n + 1/2)) で表される。したがって (n=0) の基底状態でも、エネルギーは (0) ではなく ((1/2)\\hbar\\omega) になる。これは零点エネルギー（zero-point energy）であり、調和振動子を演算子代数で量子化した構造に由来する。",
+        "teammate_whisper": "佐代先輩が静かに言う。「いちばん静かな状態にも、まだ消せない形がある」",
         "judge_criteria": [
-          "Answers 0.5",
-          "Mentions zero-point energy"
+          "数値として (0.5) を答えている。",
+          "零点エネルギーに言及している。",
+          "必要に応じて (\\hbar\\omega(n + 1/2)) のスペクトルと結びつけている。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p05_density_pure",
         "session_id": "session_01",
-        "round": "Explanation Round",
-        "stage_label": "Board Explanation",
+        "round": "説明ラウンド",
+        "stage_label": "黒板説明",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_density"
         ],
-        "question": "For a pure state density operator rho = |psi><psi|, fill the identity: rho^2 = __.",
+        "question": "純粋状態の密度演算子が (\\rho = |\\psi\\rangle\\langle\\psi|) で与えられるとき、次の恒等式を埋めよ。\n\n[\n\\rho^2 = __\n]",
         "gate": {
           "type": "term_blank",
           "answers": [
@@ -1416,25 +1510,26 @@ window.SCIO_DATA = {
             "ρ"
           ]
         },
-        "open_question": "What changes when the system is mixed or reduced from a larger system?",
-        "model_answer": "For a pure state rho is idempotent, but a mixed or reduced density operator may not satisfy the same purity relation and can encode loss of subsystem coherence.",
-        "teammate_whisper": "Haru circles rho twice and waits for it to mean something.",
+        "open_question": "系が混合状態である場合、または大きな系から一部分だけを取り出して記述する場合、何が変わるのか。純粋状態との違いを説明せよ。",
+        "model_answer": "純粋状態の密度演算子 (\\rho = |\\psi\\rangle\\langle\\psi|) は冪等性（idempotency）を持ち、(\\rho^2 = \\rho) を満たす。一方、混合状態や、より大きな系から部分系だけを取り出した縮約密度演算子（reduced density operator）は、一般には同じ純粋性の関係を満たさない。特に、無視した部分系と量子的に相関している場合、部分系だけを見るとコヒーレンスが失われたような記述になることがある。",
+        "teammate_whisper": "春は (\\rho) を二度丸で囲んだ。「二回かけたあと、何に戻るのか……そこだけ見たい」",
         "judge_criteria": [
-          "Gives rho",
-          "Contrasts pure with mixed/reduced state"
+          "空欄に (\\rho) を入れている。",
+          "純粋状態と混合状態、または縮約状態の違いを説明している。",
+          "冪等性や純粋性の関係に触れている。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p05_transfer_basis_change",
         "session_id": "session_01",
-        "round": "Transfer Round",
-        "stage_label": "Transfer Challenge",
+        "round": "転用ラウンド",
+        "stage_label": "転用チャレンジ",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_framework"
         ],
-        "question": "A state is expanded in one basis and then rewritten in another. What kind of matrix changes the components between bases?",
+        "question": "ある状態を一つの基底で展開し、別の基底で書き直す。このとき、成分を基底間で変換するのは、どのような行列か。",
         "gate": {
           "type": "short_keyword",
           "answers": [
@@ -1443,25 +1538,26 @@ window.SCIO_DATA = {
             "unitary matrix"
           ]
         },
-        "open_question": "Why does changing basis preserve the state while changing the coordinates used to describe it?",
-        "model_answer": "The state vector is the same physical object, while a basis change rewrites its components through a transformation matrix, often unitary for orthonormal quantum bases.",
-        "teammate_whisper": "Rikka: the coordinates move; the state does not have to.",
+        "open_question": "基底を変えても状態そのものは保たれ、変わるのはそれを記述する座標成分である。これはなぜか、状態と成分を区別して説明せよ。",
+        "model_answer": "状態ベクトルは同じ物理的対象であり、基底を変えると変化するのは、その状態を表す成分である。成分は変換行列（transformation matrix）によって書き換えられる。量子力学で正規直交基底どうしを移る場合には、多くの場合ユニタリ行列（unitary matrix）として表される。",
+        "teammate_whisper": "立花が言う。「座標は動く。でも、状態まで動いたと決めつけないで」",
         "judge_criteria": [
-          "Names the transformation idea",
-          "Separates the state from its coordinates"
+          "基底変換を行う行列、または変換行列という考えを答えている。",
+          "状態そのものと、その座標成分を区別して説明している。",
+          "正規直交基底の場合にユニタリ変換となることに触れられていれば望ましい。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer only after self-assessment."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。自己評価の後に模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p06_partial_trace",
         "session_id": "session_01",
-        "round": "Cross-Examination Round",
-        "stage_label": "Cross-Examination",
+        "round": "反対尋問ラウンド",
+        "stage_label": "クロス・エグザミネーション",
         "source_label": "source_pdf",
         "source_refs": [
           "ref_ch1_density"
         ],
-        "question": "What operation obtains a subsystem density operator by tracing over the other subsystem?",
+        "question": "複合系のうち、一方の部分系について跡を取り、もう一方の部分系の密度演算子を得る操作を何というか。",
         "gate": {
           "type": "short_keyword",
           "answers": [
@@ -1470,14 +1566,15 @@ window.SCIO_DATA = {
             "reduced trace"
           ]
         },
-        "open_question": "Why would a team lose points for ignoring this operation?",
-        "model_answer": "If a subsystem is entangled with what is ignored, the subsystem is described by a reduced density operator, not by a standalone pure state vector.",
-        "teammate_whisper": "Mio is not here yet, but the question already sounds like her.",
+        "open_question": "この操作を無視すると、なぜチームは減点されるのか。見ていない部分系との関係に注目して説明せよ。",
+        "model_answer": "無視する部分系と注目する部分系がエンタングルしている場合、注目する部分系は単独の純粋状態ベクトルではなく、縮約密度演算子（reduced density operator）で記述される。この縮約密度演算子は、見ていない部分系について部分跡（partial trace）を取ることで得られる。したがって、部分跡を無視すると、部分系の状態を過度に単純化してしまい、物理的に正しい記述を失う。",
+        "teammate_whisper": "澪はまだここにいない。それなのに、この問いだけ、もう彼女の声みたいに聞こえる。「見てないものを、なかったことにしないで」",
         "judge_criteria": [
-          "Names partial trace",
-          "Explains why ignored systems matter"
+          "部分跡、または partial trace を正しく名づけている。",
+          "無視した部分系が、注目する部分系の記述に影響しうることを説明している。",
+          "エンタングルメントがある場合、部分系は単独の純粋状態とは限らないと述べている。"
         ],
-        "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+        "retry_policy": "機械採点ゲートを通過するまで、模範解答は表示されない。模範解答を閲覧した場合、この問題は cleared_with_answer として扱う。"
       },
       {
         "id": "p07_modes",
@@ -2226,55 +2323,147 @@ window.SCIO_DATA = {
         "opening_scene": [
           {
             "speaker": "narration",
-            "text": "The regional hall smelled like chalk dust, polished floor wax, and the kind of silence that made every page turn sound official."
+            "text": "地方予選の会場は、思っていたよりずっと静かだった。\n\n磨かれた床の匂い。\n黒板のチョークの粉。\nページをめくる音まで、審査されているみたいに響く。\n\n私は、膝の上で手を握った。\n\n前の席の制服。横に並ぶ名札。知らない学校の視線。\nどれも、私たちより先に答えを知っているように見えた。"
           },
           {
-            "speaker": "haru",
-            "text": "If I do not understand the notation, I am going to say so. Even if everyone hears me."
+            "speaker": "ハル",
+            "text": "「……私、記号の意味が分からなかったら、ちゃんと言う」"
           },
           {
-            "speaker": "minori",
-            "text": "Good. A wrong silence costs more than a wrong answer."
+            "speaker": "narration",
+            "text": "声に出した瞬間、喉が少しだけ震えた。\nでも、飲み込まなかった。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「みんなに聞こえても、言う」"
+          },
+          {
+            "speaker": "narration",
+            "text": "実里先輩は、こちらを見ずに小さくうなずいた。"
+          },
+          {
+            "speaker": "ミノリ",
+            "text": "「いいよ」"
+          },
+          {
+            "speaker": "narration",
+            "text": "柔らかい声だった。\nけれど、その次の言葉だけ、少し硬かった。"
+          },
+          {
+            "speaker": "ミノリ",
+            "text": "「間違った沈黙のほうが、間違った答えより高くつくから」"
           }
         ],
         "official_briefing": {
-          "speaker": "Senior Examiner",
-          "topic": "state vectors, operators, and density operators",
-          "text": "This foundation round tests the language of quantum mechanics: vector spaces, basis expansion, observables as operators, oscillator algebra, and density operators. Do not assume a symbol is a number just because it fits on one line. Ask what space it acts on, what basis is being used, and whether a subsystem has been separated from something unobserved.",
-          "what_not_to_assume": "Do not treat non-commuting operators like ordinary algebraic variables."
+          "speaker": "審査主任",
+          "topic": "量子力学の基本言語",
+          "text": "正面のスクリーンに、最初のラウンド名が映った。\n\n基礎ラウンド。\n量子力学の言葉。\n\n会場の空気が、半音だけ低くなる。\n\n審査主任がマイクの前に立った。\n\n「本ラウンドでは、量子力学の基本言語を問います」\n\n声は淡々としていた。\nだからこそ、一語ずつ重かった。\n\n「状態ベクトル、基底展開、観測量としての演算子、調和振動子の代数、密度演算子。いずれも、計算以前に、記号が何を表しているかを見極める問題です」\n\n私はノートの端に、急いで単語だけを書き取った。\n\n状態。\n基底。\n演算子。\n密度。\n\n「一行に収まっているからといって、その記号をただの数だと思わないこと」\n\nペン先が止まった。\n\n「それはどの空間に作用するのか。どの基底で書かれているのか。見ていない部分系を切り離してよいのか。必ず確認してください」\n\n審査主任は、少し間を置いた。\n\n「特に、交換しない演算子を、普通の文字式のように扱わないこと」\n\nその一言で、隣の立花が顔を上げた。\n\n私はまだ、何を見落とすのか分からなかった。\nでも、見落としたら負ける場所に来てしまったことだけは分かった。",
+          "what_not_to_assume": "特に、交換しない演算子を、普通の文字式のように扱わないこと"
         },
         "mid_scene_reaction": [
           {
-            "speaker": "rikka",
-            "text": "The answer is short. The missing reason is not."
+            "speaker": "narration",
+            "text": "解答欄に入れる言葉は、思ったより短かった。\n\n短い。\nだから、怖い。\n\n立花が画面を見たまま、早口で言った。"
           },
           {
-            "speaker": "haru",
-            "text": "Then I want the reason. If we cannot say it, we do not have it yet."
+            "speaker": "立花",
+            "text": "「答えは短い。でも、足りない理由は短くない」"
+          },
+          {
+            "speaker": "narration",
+            "text": "私は、消しゴムを握ったままうなずいた。\n\nたぶん、ここで名前だけ入れれば、ゲートは開く。\nでも、それだけで進んだら、次で落ちる気がした。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「じゃあ……理由がほしい」"
+          },
+          {
+            "speaker": "narration",
+            "text": "自分の声は小さかった。\nでも、隣の実里先輩には届いた。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「私たちが説明できないなら、まだ持ってないってことだよね」"
+          },
+          {
+            "speaker": "narration",
+            "text": "立花のペンが、一度だけ止まった。"
+          },
+          {
+            "speaker": "立花",
+            "text": "「……そう。今のは、いい止まり方」"
           }
         ],
         "rival_pressure_scene": [
           {
-            "speaker": "natsuki",
-            "text": "Sakuraba is slower this year."
+            "speaker": "narration",
+            "text": "隣のブロックから、低い声が聞こえた。"
           },
           {
-            "speaker": "minori",
-            "text": "Sakuraba is naming its assumptions this year."
+            "speaker": "ナツキ",
+            "text": "「桜庭、今年は遅いね」"
+          },
+          {
+            "speaker": "narration",
+            "text": "青藍の名札。\n夏希さんだった。\n\n笑っているように見えた。\nでも、目は問題画面から離れていない。\n\n私は思わず肩に力を入れた。\n遅い。\nその言葉だけで、会場の時計の音が近くなる。\n\n実里先輩は、画面に視線を戻したまま答えた。"
+          },
+          {
+            "speaker": "ミノリ",
+            "text": "「今年の桜庭は、仮定に名前をつけてるの」"
+          },
+          {
+            "speaker": "narration",
+            "text": "静かな声だった。\n\n夏希さんは、すぐには返さなかった。\nペン先だけが、机の上で短く鳴った。\n\n私は息を吸った。\n遅いのかもしれない。\nでも、何を置いたまま走るかは、まだ決めたくなかった。"
           }
         ],
         "breakthrough_scene": [
           {
-            "speaker": "haru",
-            "text": "A state is not just an answer waiting to be read. It is a promise about what measurements can mean."
+            "speaker": "narration",
+            "text": "ゲートが開いた音がした。\n\n会場のざわめきが、少し遅れて戻ってくる。\n私は画面から目を離せなかった。\n\n答えは、ただの単語だった。\nでも、その単語の後ろに、急に広い場所が見えた気がした。"
           },
           {
-            "speaker": "sayo",
-            "text": "That is the first page of the notebook I wanted to leave behind."
+            "speaker": "ハル",
+            "text": "「状態って……」"
+          },
+          {
+            "speaker": "narration",
+            "text": "私はノートを見下ろした。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「読めば答えが出てくる札、みたいなものじゃないんだね」"
+          },
+          {
+            "speaker": "narration",
+            "text": "誰も急かさなかった。"
+          },
+          {
+            "speaker": "ハル",
+            "text": "「どんな測定なら、何が言えるのか。その約束、みたいなものなんだ」"
+          },
+          {
+            "speaker": "narration",
+            "text": "言い終えてから、少し恥ずかしくなった。\nうまく言えた自信はなかった。\n\n佐代先輩が、私のノートを見た。"
+          },
+          {
+            "speaker": "サヨ",
+            "text": "「それでいい」"
+          },
+          {
+            "speaker": "narration",
+            "text": "その声は、とても静かだった。"
+          },
+          {
+            "speaker": "narration",
+            "text": "「私が残したかったノートの、一ページ目はそこだから」"
+          },
+          {
+            "speaker": "narration",
+            "text": "私はもう一度、ペンを持ち直した。"
           }
         ],
-        "notebook_update": "Haru writes: name the space, then the basis, then what the operator is allowed to do.",
-        "next_hook": "Seiran's captain smiles at the oscillator board as if the next round has already begun."
+        "notebook_update": "私はノートの新しい行に、ゆっくり書いた。\n\nまず、空間の名前。\n次に、基底の名前。\nそれから、その演算子が何をしてよいのか。\n\n書いてから、少しだけ線を太くした。\n\n焦ったら、答えの形だけを見る。\n落ち着いたら、記号のいる場所を見る。\n\n私は後者を選べるようになりたいと思った。",
+        "next_hook": "最初のラウンドが終わっても、青藍の席はまだ静かだった。\n\n私は水を飲もうとして、手を止めた。\n\n青藍の主将が、次のボードを見ていた。\n調和振動子。\n黒板に並ぶ、見慣れたようで見慣れない記号。\n\n彼女は、もう次の試合が始まっているみたいに笑った。\n\n立花が、小さく舌打ちした。\n\n「……来るよ。順番を間違えたら終わるやつ」\n\n私はノートを閉じなかった。\n\nまだ怖い。\nでも、次のページは白紙のままにしたくなかった。"
       },
       {
         "id": "session_02",
