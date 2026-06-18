@@ -1,0 +1,909 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "prompts",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "evaluation_policy": {
+    "machine_graded_gate": true,
+    "open_answer_lock": true,
+    "model_answer_reveal_after_gate": true,
+    "self_assessment": true,
+    "retry_tracking": true
+  },
+  "prompts": [
+    {
+      "id": "p01_ket",
+      "session_id": "session_01",
+      "round": "Foundation Round",
+      "stage_label": "Quick Problem",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_framework"
+      ],
+      "question": "In Dirac notation, |psi> is called what kind of vector?",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "ket",
+          "ket vector"
+        ]
+      },
+      "open_question": "Explain why the ket alone is not yet a measurement result.",
+      "model_answer": "A ket represents a state vector in the system's Hilbert space. Measurement results come from observables and probabilities, not from the symbol alone.",
+      "teammate_whisper": "Haru whispers: start with the name before the meaning.",
+      "judge_criteria": [
+        "Names ket correctly",
+        "Separates state representation from measurement outcome"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p02_hermitian",
+      "session_id": "session_01",
+      "round": "Foundation Round",
+      "stage_label": "Quick Problem",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_framework"
+      ],
+      "question": "True or false: Hermitian operators representing observables have real eigenvalues.",
+      "gate": {
+        "type": "true_false",
+        "answer": true
+      },
+      "open_question": "Why does the story care that observables are Hermitian?",
+      "model_answer": "Real eigenvalues allow operator eigenvalues to represent possible measurement outcomes. That is why the formal condition matters physically.",
+      "teammate_whisper": "Minori taps the desk: possible result, not pretty notation.",
+      "judge_criteria": [
+        "Connects Hermitian property to real outcomes"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p03_commutator",
+      "session_id": "session_01",
+      "round": "Foundation Round",
+      "stage_label": "Formula Blank",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_oscillator"
+      ],
+      "question": "Fill the oscillator algebra blank: [a, a^dagger] = __.",
+      "gate": {
+        "type": "formula_blank",
+        "answers": [
+          "1",
+          "I",
+          "identity"
+        ]
+      },
+      "open_question": "What does this commutator warn you not to do?",
+      "model_answer": "It warns that the ladder operators do not commute like ordinary numbers; changing order changes the result and the state ladder.",
+      "teammate_whisper": "Rikka says too quickly: order is part of the answer.",
+      "judge_criteria": [
+        "Gives the commutator",
+        "Explains non-commuting order"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p04_ground_energy",
+      "session_id": "session_01",
+      "round": "Foundation Round",
+      "stage_label": "Numeric Gate",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_oscillator"
+      ],
+      "question": "For the harmonic oscillator, the ground-state energy is what number times hbar omega?",
+      "gate": {
+        "type": "numeric",
+        "answer": 0.5,
+        "tolerance": 0.001
+      },
+      "open_question": "Why is the ground state not zero energy in this model?",
+      "model_answer": "The oscillator spectrum is hbar omega (n + 1/2), so even n=0 has zero-point energy, tied to the quantum operator structure.",
+      "teammate_whisper": "Sayo: the quietest state still has structure.",
+      "judge_criteria": [
+        "Answers 0.5",
+        "Mentions zero-point energy"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p05_density_pure",
+      "session_id": "session_01",
+      "round": "Explanation Round",
+      "stage_label": "Board Explanation",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_density"
+      ],
+      "question": "For a pure state density operator rho = |psi><psi|, fill the identity: rho^2 = __.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "rho",
+          "ρ"
+        ]
+      },
+      "open_question": "What changes when the system is mixed or reduced from a larger system?",
+      "model_answer": "For a pure state rho is idempotent, but a mixed or reduced density operator may not satisfy the same purity relation and can encode loss of subsystem coherence.",
+      "teammate_whisper": "Haru circles rho twice and waits for it to mean something.",
+      "judge_criteria": [
+        "Gives rho",
+        "Contrasts pure with mixed/reduced state"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p05_transfer_basis_change",
+      "session_id": "session_01",
+      "round": "Transfer Round",
+      "stage_label": "Transfer Challenge",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_framework"
+      ],
+      "question": "A state is expanded in one basis and then rewritten in another. What kind of matrix changes the components between bases?",
+      "gate": {
+        "type": "short_keyword",
+        "answers": [
+          "transformation matrix",
+          "unitary transformation",
+          "unitary matrix"
+        ]
+      },
+      "open_question": "Why does changing basis preserve the state while changing the coordinates used to describe it?",
+      "model_answer": "The state vector is the same physical object, while a basis change rewrites its components through a transformation matrix, often unitary for orthonormal quantum bases.",
+      "teammate_whisper": "Rikka: the coordinates move; the state does not have to.",
+      "judge_criteria": [
+        "Names the transformation idea",
+        "Separates the state from its coordinates"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer only after self-assessment."
+    },
+    {
+      "id": "p06_partial_trace",
+      "session_id": "session_01",
+      "round": "Cross-Examination Round",
+      "stage_label": "Cross-Examination",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_density"
+      ],
+      "question": "What operation obtains a subsystem density operator by tracing over the other subsystem?",
+      "gate": {
+        "type": "short_keyword",
+        "answers": [
+          "partial trace",
+          "trace over",
+          "reduced trace"
+        ]
+      },
+      "open_question": "Why would a team lose points for ignoring this operation?",
+      "model_answer": "If a subsystem is entangled with what is ignored, the subsystem is described by a reduced density operator, not by a standalone pure state vector.",
+      "teammate_whisper": "Mio is not here yet, but the question already sounds like her.",
+      "judge_criteria": [
+        "Names partial trace",
+        "Explains why ignored systems matter"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p07_modes",
+      "session_id": "session_02",
+      "round": "Foundation Round",
+      "stage_label": "Quick Problem",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch2_radiation",
+        "ref_ch1_oscillator"
+      ],
+      "question": "The quantized electromagnetic field treats each mode like a quantum harmonic ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "oscillator",
+          "harmonic oscillator"
+        ]
+      },
+      "open_question": "How does this connect Chapter 1 to radiation?",
+      "model_answer": "Field quantization reuses oscillator algebra for field modes, so number states and creation/annihilation operators become photon language.",
+      "teammate_whisper": "Rikka points from the oscillator board to the cavity sketch.",
+      "judge_criteria": [
+        "Names oscillator",
+        "Connects mode quantization to photons"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p08_number_state",
+      "session_id": "session_02",
+      "round": "Foundation Round",
+      "stage_label": "Choice Gate",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch2_radiation"
+      ],
+      "question": "Which field state has a definite photon number?",
+      "gate": {
+        "type": "choice",
+        "answer": "number_state",
+        "options": [
+          {
+            "value": "coherent_state",
+            "label": "Coherent state"
+          },
+          {
+            "value": "number_state",
+            "label": "Number/Fock state"
+          },
+          {
+            "value": "thermal_state",
+            "label": "Thermal state"
+          }
+        ]
+      },
+      "open_question": "Why does definite photon number not mean classical field behavior?",
+      "model_answer": "A number state has fixed photon count but lacks the same phase-like classical field character associated with coherent states.",
+      "teammate_whisper": "Touko: countable is not the same as classical.",
+      "judge_criteria": [
+        "Chooses number/Fock state",
+        "Distinguishes photon number from classicality"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p09_coherent_eigen",
+      "session_id": "session_02",
+      "round": "Foundation Round",
+      "stage_label": "Term Blank",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_oscillator",
+        "ref_ch2_radiation"
+      ],
+      "question": "Coherent states are eigenstates of which oscillator operator?",
+      "gate": {
+        "type": "short_keyword",
+        "answers": [
+          "annihilation operator",
+          "a",
+          "lowering operator"
+        ]
+      },
+      "open_question": "Why does this make coherent states useful for light?",
+      "model_answer": "Because annihilation acting on a coherent state returns the state times a complex amplitude, making them close to classical field behavior while remaining quantum states.",
+      "teammate_whisper": "Sayo: the state bends without breaking.",
+      "judge_criteria": [
+        "Names annihilation operator",
+        "Explains classical-like amplitude"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p10_rabi",
+      "session_id": "session_02",
+      "round": "Explanation Round",
+      "stage_label": "Board Explanation",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch3_atom_field"
+      ],
+      "question": "The coherent oscillation rate for a near-resonant driven two-level atom is commonly called the ___ frequency.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "Rabi",
+          "rabi frequency"
+        ]
+      },
+      "open_question": "What physical ingredients affect that frequency in the book's treatment?",
+      "model_answer": "The Rabi frequency depends on the field coupling to the atomic transition, commonly through the transition dipole interaction divided by hbar.",
+      "teammate_whisper": "Minori: do not recite the name; say what drives it.",
+      "judge_criteria": [
+        "Names Rabi frequency",
+        "Connects to field-transition coupling"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p11_jc_exchange",
+      "session_id": "session_02",
+      "round": "Transfer Round",
+      "stage_label": "Transfer Challenge",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch3_atom_field"
+      ],
+      "question": "In the Jaynes-Cummings picture, a two-level atom and a single field mode exchange one ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "excitation",
+          "quantum",
+          "photon"
+        ]
+      },
+      "open_question": "Why is this more specific than saying 'the atom is driven by light'?",
+      "model_answer": "The model tracks excitation exchange between atom and quantized mode, so the photon-number structure changes the dynamics.",
+      "teammate_whisper": "Haru: the field is keeping score.",
+      "judge_criteria": [
+        "Identifies excitation exchange",
+        "Contrasts quantized mode with classical drive"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p12_coherent_vs_number",
+      "session_id": "session_02",
+      "round": "Cross-Examination Round",
+      "stage_label": "True/False",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch2_radiation"
+      ],
+      "question": "True or false: a coherent state and a number state have the same photon-number uncertainty.",
+      "gate": {
+        "type": "true_false",
+        "answer": false
+      },
+      "open_question": "What mistake would that false statement make?",
+      "model_answer": "It would erase the distinction between fixed photon number and coherent-state photon statistics, a central field-state difference.",
+      "teammate_whisper": "Touko grins: statistics are where the apparatus catches you.",
+      "judge_criteria": [
+        "Answers false",
+        "Mentions photon statistics"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p13_reservoir",
+      "session_id": "session_03",
+      "round": "Foundation Round",
+      "stage_label": "Quick Problem",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch4_reservoir"
+      ],
+      "question": "In the master-equation chapter, the large environment with many densely spaced levels is called a ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "reservoir",
+          "environment",
+          "bath"
+        ]
+      },
+      "open_question": "Why is this object not just background decoration?",
+      "model_answer": "The reservoir determines dissipation and decoherence of the reduced system, so it can change observable dynamics.",
+      "teammate_whisper": "Mio: the silent thing is still in the equation.",
+      "judge_criteria": [
+        "Names reservoir/environment",
+        "Connects to dissipation/decoherence"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p14_born_markov",
+      "session_id": "session_03",
+      "round": "Foundation Round",
+      "stage_label": "Multiple Selection",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch4_reservoir"
+      ],
+      "question": "Select the assumptions associated with a Born-Markov style reduction.",
+      "gate": {
+        "type": "multiple_select",
+        "answers": [
+          "weak_coupling",
+          "short_memory",
+          "reservoir_unchanged"
+        ],
+        "options": [
+          {
+            "value": "weak_coupling",
+            "label": "weak system-reservoir coupling"
+          },
+          {
+            "value": "short_memory",
+            "label": "short reservoir memory"
+          },
+          {
+            "value": "reservoir_unchanged",
+            "label": "reservoir approximately unchanged"
+          },
+          {
+            "value": "perfect_isolation",
+            "label": "perfect isolation from environment"
+          }
+        ]
+      },
+      "open_question": "Why are these assumptions emotionally important in the match?",
+      "model_answer": "Because the team must not claim a clean reduced equation unless the approximations that justify it have actually been named.",
+      "teammate_whisper": "Minori does not look at Haru. She looks at the word 'assumption'.",
+      "judge_criteria": [
+        "Selects the three approximation conditions",
+        "Rejects perfect isolation"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p15_decoherence",
+      "session_id": "session_03",
+      "round": "Foundation Round",
+      "stage_label": "Term Blank",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch4_reservoir",
+        "ref_ch8_entanglement"
+      ],
+      "question": "The loss of phase coherence caused by coupling to unobserved degrees of freedom is called ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "decoherence"
+        ]
+      },
+      "open_question": "How does decoherence threaten quantum information processing?",
+      "model_answer": "Quantum information relies on coherent superpositions and entanglement; decoherence degrades the phase relations that protocols need.",
+      "teammate_whisper": "Sayo: losing the phase is losing the promise.",
+      "judge_criteria": [
+        "Names decoherence",
+        "Connects to information processing"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p16_cavity_loss",
+      "session_id": "session_03",
+      "round": "Explanation Round",
+      "stage_label": "Board Explanation",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch5_cavity"
+      ],
+      "question": "For strong atom-cavity behavior, coherent coupling g must be compared with cavity loss kappa and atomic decay ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "Gamma",
+          "gamma",
+          "Γ"
+        ]
+      },
+      "open_question": "Why does this comparison matter more than the symbol g alone?",
+      "model_answer": "A coupling is only useful for coherent exchange if it acts faster or more strongly than the relevant loss processes.",
+      "teammate_whisper": "Touko points at every arrow that leaves the cavity.",
+      "judge_criteria": [
+        "Names decay rate",
+        "Explains coherent exchange versus loss"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p17_eit",
+      "session_id": "session_03",
+      "round": "Transfer Round",
+      "stage_label": "Transfer Challenge",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch6_media"
+      ],
+      "question": "In three-level media, controlled transparency and slow propagation are associated with the acronym ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "EIT",
+          "electromagnetically induced transparency"
+        ]
+      },
+      "open_question": "What must the team remember before using EIT as a magic word?",
+      "model_answer": "EIT depends on level structure, resonance, drive fields, and adiabatic/control conditions; it is not generic transparency.",
+      "teammate_whisper": "Rikka underlines the drive field twice.",
+      "judge_criteria": [
+        "Names EIT",
+        "Mentions conditions"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p18_reduced_state",
+      "session_id": "session_03",
+      "round": "Cross-Examination Round",
+      "stage_label": "Cross-Examination",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_density",
+        "ref_ch4_reservoir"
+      ],
+      "question": "If you observe only subsystem A of an entangled A+B state, should A generally be described by a state vector or reduced density operator?",
+      "gate": {
+        "type": "choice",
+        "answer": "reduced_density_operator",
+        "options": [
+          {
+            "value": "state_vector",
+            "label": "state vector"
+          },
+          {
+            "value": "reduced_density_operator",
+            "label": "reduced density operator"
+          }
+        ]
+      },
+      "open_question": "Why is this an important turning point in the team's reasoning?",
+      "model_answer": "It forces the team to account for unobserved degrees of freedom before making a claim about the subsystem. The reasoning becomes safer without relying on a standalone pure state.",
+      "teammate_whisper": "Mio finally smiles without softening the question.",
+      "judge_criteria": [
+        "Chooses reduced density operator",
+        "Explains entanglement/subsystem reason"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p19_qubit",
+      "session_id": "session_04",
+      "round": "Foundation Round",
+      "stage_label": "Quick Problem",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_qubits"
+      ],
+      "question": "A quantum bit is commonly called a ___.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "qubit",
+          "quantum bit"
+        ]
+      },
+      "open_question": "What makes a qubit more than a classical bit with a fancy name?",
+      "model_answer": "A qubit can exist in superpositions of basis states and is manipulated by quantum gates and measurements governed by quantum mechanics.",
+      "teammate_whisper": "Yui: the smallest word in the room still needs two basis states.",
+      "judge_criteria": [
+        "Names qubit",
+        "Mentions superposition/quantum operations"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p20_no_cloning",
+      "session_id": "session_04",
+      "round": "Foundation Round",
+      "stage_label": "True/False",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_qubits"
+      ],
+      "question": "True or false: an arbitrary unknown quantum state can be perfectly copied by a universal cloning operation.",
+      "gate": {
+        "type": "true_false",
+        "answer": false
+      },
+      "open_question": "Why does this theorem protect the story's idea of physical information?",
+      "model_answer": "No-cloning shows quantum information is constrained by state structure, not merely by technological inconvenience.",
+      "teammate_whisper": "Haru: if it cannot be copied, listening matters.",
+      "judge_criteria": [
+        "Answers false",
+        "Explains arbitrary unknown state"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p21_bell",
+      "session_id": "session_04",
+      "round": "Foundation Round",
+      "stage_label": "Term Blank",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_entanglement"
+      ],
+      "question": "Bell states are examples of two-qubit ___ states.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "entangled",
+          "entanglement"
+        ]
+      },
+      "open_question": "Why are Bell states so useful in protocols?",
+      "model_answer": "They provide shared entanglement used in protocols such as teleportation and dense coding, and in discussions of nonlocal correlations.",
+      "teammate_whisper": "Sayo folds two fingers together: not separate anymore.",
+      "judge_criteria": [
+        "Names entanglement",
+        "Connects to protocols"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p22_measurement",
+      "session_id": "session_04",
+      "round": "Explanation Round",
+      "stage_label": "Choice Gate",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_qubits"
+      ],
+      "question": "After qubit measurement in a chosen basis, what kind of result is obtained?",
+      "gate": {
+        "type": "choice",
+        "answer": "basis_outcome",
+        "options": [
+          {
+            "value": "full_state_text",
+            "label": "a full written copy of the state"
+          },
+          {
+            "value": "basis_outcome",
+            "label": "one basis outcome with probabilities"
+          },
+          {
+            "value": "hidden_variable",
+            "label": "the hidden variable value"
+          }
+        ]
+      },
+      "open_question": "Why is basis choice part of the answer?",
+      "model_answer": "Measurement outcomes and probabilities are defined relative to the measurement basis; the result is not a full copy of the pre-measurement state.",
+      "teammate_whisper": "Minori: say the basis or lose the point.",
+      "judge_criteria": [
+        "Chooses basis outcome",
+        "Mentions probabilities/basis"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p23_protocol_match",
+      "session_id": "session_04",
+      "round": "Transfer Round",
+      "stage_label": "Matching",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_entanglement"
+      ],
+      "question": "Match protocols to key resources. Use the format A-1,B-2,C-3. A=BB84, B=Teleportation, C=Dense coding. 1=two classical bits with one qubit using shared entanglement, 2=random bases for key distribution, 3=shared entanglement plus classical communication.",
+      "gate": {
+        "type": "matching",
+        "answers": {
+          "A": "2",
+          "B": "3",
+          "C": "1"
+        }
+      },
+      "open_question": "Why is it dangerous to mix up these resources?",
+      "model_answer": "Each protocol's power comes from a specific resource pattern; confusing them leads to impossible claims about communication or security.",
+      "teammate_whisper": "Yui: protocols are team formations.",
+      "judge_criteria": [
+        "Matches all resources correctly",
+        "Explains resource specificity"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p24_bell_limit",
+      "session_id": "session_04",
+      "round": "Cross-Examination Round",
+      "stage_label": "Cross-Examination",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_entanglement"
+      ],
+      "question": "True or false: entanglement by itself allows faster-than-light usable communication.",
+      "gate": {
+        "type": "true_false",
+        "answer": false
+      },
+      "open_question": "How does this keep the story scientifically honest?",
+      "model_answer": "Entanglement gives strong correlations, but usable communication still respects the need for classical information in protocols like teleportation.",
+      "teammate_whisper": "Mio's question reaches the table before her voice does.",
+      "judge_criteria": [
+        "Answers false",
+        "Distinguishes correlation from communication"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p25_reversible",
+      "session_id": "session_05",
+      "round": "Foundation Round",
+      "stage_label": "Choice Gate",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch7_classical_computation",
+        "ref_ch9_computation",
+        "ref_ch1_framework"
+      ],
+      "question": "Why are reversible operations central in quantum computation?",
+      "gate": {
+        "type": "choice",
+        "answer": "unitary_reversible",
+        "options": [
+          {
+            "value": "unitary_reversible",
+            "label": "closed-system quantum gates are unitary and reversible"
+          },
+          {
+            "value": "erase_faster",
+            "label": "erasure is always faster"
+          },
+          {
+            "value": "avoid_math",
+            "label": "they avoid linear algebra"
+          }
+        ]
+      },
+      "open_question": "How does this connect computation back to Chapter 1?",
+      "model_answer": "Unitary gate evolution is the operator language of quantum mechanics applied to information processing.",
+      "teammate_whisper": "Rikka: the circuit is still a vector-space story.",
+      "judge_criteria": [
+        "Chooses unitary/reversible",
+        "Connects gates to operators"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p26_grover",
+      "session_id": "session_05",
+      "round": "Foundation Round",
+      "stage_label": "Term Blank",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch9_computation"
+      ],
+      "question": "Grover's unstructured search algorithm is known for a ___ speedup.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "quadratic"
+        ]
+      },
+      "open_question": "Why is this impressive but not magical?",
+      "model_answer": "It improves unstructured search quadratically under the model assumptions; it does not make every computational problem exponentially faster.",
+      "teammate_whisper": "Minori: respect the speedup by not exaggerating it.",
+      "judge_criteria": [
+        "Names quadratic",
+        "Avoids overclaiming"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p27_qft",
+      "session_id": "session_05",
+      "round": "Foundation Round",
+      "stage_label": "Term Blank",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch9_computation"
+      ],
+      "question": "QFT stands for Quantum ___ Transform.",
+      "gate": {
+        "type": "term_blank",
+        "answers": [
+          "Fourier"
+        ]
+      },
+      "open_question": "What kind of structure does the QFT exploit?",
+      "model_answer": "It reorganizes amplitudes through phase relationships, making periodic structure accessible in quantum algorithms.",
+      "teammate_whisper": "Sayo: phases can be a map if you know how to read them.",
+      "judge_criteria": [
+        "Names Fourier",
+        "Mentions phase/periodic structure"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p28_error_correction",
+      "session_id": "session_05",
+      "round": "Explanation Round",
+      "stage_label": "Multiple Selection",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch9_computation",
+        "ref_ch8_qubits"
+      ],
+      "question": "Which ideas belong to quantum error correction?",
+      "gate": {
+        "type": "multiple_select",
+        "answers": [
+          "syndrome",
+          "ancilla",
+          "no_direct_readout"
+        ],
+        "options": [
+          {
+            "value": "syndrome",
+            "label": "measure an error syndrome"
+          },
+          {
+            "value": "ancilla",
+            "label": "use ancillary degrees of freedom"
+          },
+          {
+            "value": "no_direct_readout",
+            "label": "avoid directly reading the unknown encoded state"
+          },
+          {
+            "value": "clone_state",
+            "label": "clone the unknown state many times"
+          }
+        ]
+      },
+      "open_question": "Why does no-cloning make error correction subtle?",
+      "model_answer": "The encoded state cannot simply be copied and voted on; error correction must infer errors indirectly through syndromes and redundancy.",
+      "teammate_whisper": "Haru: protect it without stealing it.",
+      "judge_criteria": [
+        "Selects syndrome/ancilla/no direct readout",
+        "Rejects cloning"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p29_requirements",
+      "session_id": "session_05",
+      "round": "Transfer Round",
+      "stage_label": "Matching",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch10_implementation"
+      ],
+      "question": "Match implementation requirements. Use the format A-1,B-2,C-3. A=readout, B=initialization, C=low decoherence. 1=prepare a known starting state, 2=keep coherence longer than gate operations, 3=measure qubits reliably.",
+      "gate": {
+        "type": "matching",
+        "answers": {
+          "A": "3",
+          "B": "1",
+          "C": "2"
+        }
+      },
+      "open_question": "Why is the final session not satisfied by a circuit diagram alone?",
+      "model_answer": "A real implementation must initialize, control, preserve, and read out qubits under physical error and decoherence limits.",
+      "teammate_whisper": "Touko: show me the machine that keeps the promise.",
+      "judge_criteria": [
+        "Matches requirements",
+        "Explains physical implementation constraints"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    },
+    {
+      "id": "p30_final_synthesis",
+      "session_id": "session_05",
+      "round": "Cross-Examination Round",
+      "stage_label": "Final Statement",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch10_implementation",
+        "ref_ch9_computation",
+        "ref_ch4_reservoir"
+      ],
+      "question": "Which final statement is safer for a physical quantum-computation claim?",
+      "gate": {
+        "type": "choice",
+        "answer": "full_conditions",
+        "options": [
+          {
+            "value": "single_effect",
+            "label": "One striking quantum effect is enough"
+          },
+          {
+            "value": "full_conditions",
+            "label": "Name the needed physical conditions and limits"
+          }
+        ]
+      },
+      "open_question": "Explain why scope conditions matter in a final statement.",
+      "model_answer": "A safe final statement ties the abstract claim to stated physical conditions, controls, and limits. It avoids overclaiming from a single effect.",
+      "teammate_whisper": "Sayo does not give Haru the sentence. She gives her the silence to build it.",
+      "judge_criteria": [
+        "Chooses full condition set",
+        "Synthesizes across source refs"
+      ],
+      "retry_policy": "Model answer remains locked until the machine-graded gate is cleared. Viewing the model answer marks the prompt as cleared_with_answer."
+    }
+  ]
+}

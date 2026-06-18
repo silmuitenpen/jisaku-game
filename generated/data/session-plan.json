@@ -1,0 +1,190 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "session_plan_public",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "spoiler_policy": "Safe summaries only. Final route/result and decisive dialogue are sealed.",
+  "sessions": [
+    {
+      "id": "session_01",
+      "title": "Qualifier: The Space Before the Answer",
+      "source_refs": [
+        "ref_ch1_framework",
+        "ref_ch1_oscillator",
+        "ref_ch1_density"
+      ],
+      "structure": [
+        "Opening Scene",
+        "Official Briefing",
+        "Foundation Round",
+        "Mid-scene Reaction",
+        "Explanation Round",
+        "Rival Pressure Scene",
+        "Transfer Round",
+        "Cross-Examination Round",
+        "Breakthrough Scene",
+        "Notebook Update",
+        "Next Hook"
+      ],
+      "official_briefing_safe": {
+        "topic": "state vectors, operators, and density operators",
+        "what_not_to_assume": "Do not treat non-commuting operators like ordinary algebraic variables."
+      },
+      "prompt_count": 7,
+      "drama_safe_summary": "Seiran's captain smiles at the oscillator board as if the next round has already begun.",
+      "drama_beat_ids": [
+        "db_01",
+        "db_02",
+        "db_03"
+      ],
+      "featured_rival_schools_safe": [
+        "seiran"
+      ],
+      "inheritance_progress_safe": "The team begins turning basic questions into a shared standard."
+    },
+    {
+      "id": "session_02",
+      "title": "Semifinal Pool: Light With Teeth",
+      "source_refs": [
+        "ref_ch2_radiation",
+        "ref_ch3_atom_field"
+      ],
+      "structure": [
+        "Opening Scene",
+        "Official Briefing",
+        "Foundation Round",
+        "Mid-scene Reaction",
+        "Explanation Round",
+        "Rival Pressure Scene",
+        "Transfer Round",
+        "Cross-Examination Round",
+        "Breakthrough Scene",
+        "Notebook Update",
+        "Next Hook"
+      ],
+      "official_briefing_safe": {
+        "topic": "quantized radiation and light-matter coupling",
+        "what_not_to_assume": "Do not assume bright, coherent, number, and thermal fields have the same photon statistics."
+      },
+      "prompt_count": 6,
+      "drama_safe_summary": "A cross-examination ticket arrives from Kuroha Academy: reservoir memory permitted.",
+      "drama_beat_ids": [
+        "db_05"
+      ],
+      "featured_rival_schools_safe": [
+        "minato"
+      ],
+      "inheritance_progress_safe": "The team learns to connect formal models with physical light-matter behavior."
+    },
+    {
+      "id": "session_03",
+      "title": "Repechage: The Silent Reservoir",
+      "source_refs": [
+        "ref_ch4_reservoir",
+        "ref_ch5_cavity",
+        "ref_ch6_media"
+      ],
+      "structure": [
+        "Opening Scene",
+        "Official Briefing",
+        "Foundation Round",
+        "Mid-scene Reaction",
+        "Explanation Round",
+        "Rival Pressure Scene",
+        "Transfer Round",
+        "Cross-Examination Round",
+        "Breakthrough Scene",
+        "Notebook Update",
+        "Next Hook"
+      ],
+      "official_briefing_safe": {
+        "topic": "open quantum systems, cavity loss, and propagation conditions",
+        "what_not_to_assume": "Do not assume dissipation is a small afterthought; it can decide the observable result."
+      },
+      "prompt_count": 6,
+      "drama_safe_summary": "Akebono's borrowed textbook is open to the chapter on qubits.",
+      "drama_beat_ids": [
+        "db_04",
+        "db_07",
+        "db_09"
+      ],
+      "featured_rival_schools_safe": [
+        "kuroha"
+      ],
+      "inheritance_progress_safe": "The inherited question becomes a safe public checkpoint about assumptions."
+    },
+    {
+      "id": "session_04",
+      "title": "Finalist Selection: Information That Cannot Be Copied",
+      "source_refs": [
+        "ref_ch8_qubits",
+        "ref_ch8_entanglement"
+      ],
+      "structure": [
+        "Opening Scene",
+        "Official Briefing",
+        "Foundation Round",
+        "Mid-scene Reaction",
+        "Explanation Round",
+        "Rival Pressure Scene",
+        "Transfer Round",
+        "Cross-Examination Round",
+        "Breakthrough Scene",
+        "Notebook Update",
+        "Next Hook"
+      ],
+      "official_briefing_safe": {
+        "topic": "qubits, gates, no-cloning, entanglement, and protocols",
+        "what_not_to_assume": "Do not assume entanglement sends usable messages faster than classical communication permits."
+      },
+      "prompt_count": 6,
+      "drama_safe_summary": "The finalist board is covered before anyone can read the route.",
+      "drama_beat_ids": [
+        "db_06"
+      ],
+      "featured_rival_schools_safe": [
+        "akebono"
+      ],
+      "inheritance_progress_safe": "Team explanation becomes part of the inheritance theme."
+    },
+    {
+      "id": "session_05",
+      "title": "Final Session: The Device That Has To Be Real",
+      "source_refs": [
+        "ref_ch9_computation",
+        "ref_ch10_implementation"
+      ],
+      "structure": [
+        "Opening Scene",
+        "Official Briefing",
+        "Foundation Round",
+        "Mid-scene Reaction",
+        "Explanation Round",
+        "Rival Pressure Scene",
+        "Transfer Round",
+        "Cross-Examination Round",
+        "Breakthrough Scene",
+        "Notebook Update",
+        "Next Hook"
+      ],
+      "official_briefing_safe": {
+        "topic": "algorithms, error correction, and physical implementation",
+        "what_not_to_assume": "Do not claim scalable computation from a single elegant effect."
+      },
+      "prompt_count": 6,
+      "drama_safe_summary": "The exact final result and ending route are sealed to preserve spoiler control outside play.",
+      "drama_beat_ids": [
+        "db_08",
+        "db_10"
+      ],
+      "featured_rival_schools_safe": [
+        "seiran",
+        "minato"
+      ],
+      "inheritance_progress_safe": "The final public structure asks for synthesis without revealing the sealed result."
+    }
+  ]
+}

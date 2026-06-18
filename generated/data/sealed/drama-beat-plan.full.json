@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "drama_beat_plan_full",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference.",
+    "spoiler_warning": "Do not open unless you want story spoilers."
+  },
+  "spoiler_policy": "Safe summary only. Exact payoff, final result, and decisive dialogue are sealed.",
+  "has_original_pdf_specific_beat": true,
+  "beats": [
+    {
+      "beat_id": "db_01",
+      "beat_type": "required",
+      "story_function": "Outsider Entry",
+      "safe_summary": "Haru enters the regional hall unable to bluff her way through Dirac notation.",
+      "content_connection": [
+        "ref_ch1_framework"
+      ],
+      "related_character_or_relationship": "Haru and Minori",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_02",
+      "beat_type": "required",
+      "story_function": "Genius Contrast",
+      "safe_summary": "Rikka solves too fast, exposing the team's communication gap.",
+      "content_connection": [
+        "ref_ch1_oscillator"
+      ],
+      "related_character_or_relationship": "Haru and Rikka",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_03",
+      "beat_type": "required",
+      "story_function": "Strict Pressure",
+      "safe_summary": "Minori demands validity conditions before speed.",
+      "content_connection": [
+        "ref_ch3_atom_field"
+      ],
+      "related_character_or_relationship": "Minori and Haru",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_04",
+      "beat_type": "required",
+      "story_function": "Gentle Inheritance",
+      "safe_summary": "Sayo names last year's loss as an unfinished question, not a wound to hide.",
+      "content_connection": [
+        "ref_ch4_reservoir"
+      ],
+      "related_character_or_relationship": "Sayo and team",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_05",
+      "beat_type": "required",
+      "story_function": "Rival Demonstration",
+      "safe_summary": "Seiran demonstrates why formal operator language can dominate a match.",
+      "content_connection": [
+        "ref_ch1_framework"
+      ],
+      "related_character_or_relationship": "Sakuraba and Seiran",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_06",
+      "beat_type": "required",
+      "story_function": "Rival School Sympathy",
+      "safe_summary": "Akebono's team-first explanations make them emotionally hard to oppose.",
+      "content_connection": [
+        "ref_ch8_entanglement"
+      ],
+      "related_character_or_relationship": "Haru and Yui",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_07",
+      "beat_type": "original_pdf_specific",
+      "story_function": "The Silent Reservoir",
+      "safe_summary": "A round about environment tracing makes the room realize that an unseen subsystem can decide the visible result.",
+      "content_connection": [
+        "ref_ch1_density",
+        "ref_ch4_reservoir"
+      ],
+      "related_character_or_relationship": "Haru, Mio, and Sayo",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_08",
+      "beat_type": "required",
+      "story_function": "Scientific Turning Point",
+      "safe_summary": "The team learns to compare coherent exchange against loss before claiming implementation success.",
+      "content_connection": [
+        "ref_ch5_cavity",
+        "ref_ch10_implementation"
+      ],
+      "related_character_or_relationship": "Rikka and Touko",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_09",
+      "beat_type": "required",
+      "story_function": "Past Failure Callback",
+      "safe_summary": "The old final question returns in safer form before the true final synthesis.",
+      "content_connection": [
+        "ref_ch4_reservoir"
+      ],
+      "related_character_or_relationship": "Sayo and Minori",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    },
+    {
+      "beat_id": "db_10",
+      "beat_type": "required",
+      "story_function": "Final Statement",
+      "safe_summary": "The team must answer with assumptions, mechanisms, and limits in one argument.",
+      "content_connection": [
+        "ref_ch10_implementation"
+      ],
+      "related_character_or_relationship": "whole ensemble",
+      "sealed_payoff": "SEALED exact emotional payoff and dialogue withheld from public review."
+    }
+  ]
+}

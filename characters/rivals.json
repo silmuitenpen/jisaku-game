@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "rivals_safe",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "spoiler_policy": "Hidden motivations and exact payoff scenes are sealed.",
+  "rivals": [
+    {
+      "id": "natsuki",
+      "name": "Natsuki Shindou",
+      "school": "Seiran Institute",
+      "visual_motif": "white blazer, gold pin, ruler-straight silver hair",
+      "intellectual_style": "calculation_style",
+      "strength": "fast symbolic manipulation and clean operator algebra",
+      "weakness": "can understate physical validity conditions",
+      "emotional_motivation_safe": "carries the pride of a school expected to win with flawless proofs",
+      "relationship_to_protagonist_team": "last year's powerhouse rival",
+      "signature_phrase": "State the space before you state the answer.",
+      "first_impression": "unreachable calm",
+      "hidden_vulnerability": "sealed",
+      "growth_moment": "sealed"
+    },
+    {
+      "id": "mio",
+      "name": "Mio Kurokawa",
+      "school": "Kuroha Academy",
+      "visual_motif": "black cardigan, teal notebook tabs, sleepy eyes",
+      "intellectual_style": "skeptical_style",
+      "strength": "finds hidden assumptions and approximation leaks",
+      "weakness": "sometimes turns doubt into paralysis",
+      "emotional_motivation_safe": "wants her team's questions to be treated as contributions, not obstruction",
+      "relationship_to_protagonist_team": "sharp cross-examiner who respects Haru's refusal to bluff",
+      "signature_phrase": "And if the reservoir remembers?",
+      "first_impression": "soft voice, severe questions",
+      "hidden_vulnerability": "sealed",
+      "growth_moment": "sealed"
+    },
+    {
+      "id": "touko",
+      "name": "Touko Hoshimi",
+      "school": "Minato Experimental High",
+      "visual_motif": "rolled sleeves, safety goggles on head, orange ribbon",
+      "intellectual_style": "experiment_style",
+      "strength": "connects equations to apparatus, timing, loss, and readout",
+      "weakness": "can distrust clean abstraction too much",
+      "emotional_motivation_safe": "believes every implementation claim must survive the lab bench",
+      "relationship_to_protagonist_team": "friendly rival who pressures Rikka to explain physically",
+      "signature_phrase": "Show me where the photon can leak.",
+      "first_impression": "bright, practical, impossible to fool",
+      "hidden_vulnerability": "sealed",
+      "growth_moment": "sealed"
+    },
+    {
+      "id": "yui",
+      "name": "Yui Amano",
+      "school": "Akebono Rural Science Club",
+      "visual_motif": "simple uniform, star hairpin, carefully mended book bag",
+      "intellectual_style": "synthesis_style",
+      "strength": "connects distant chapters and translates ideas for teammates",
+      "weakness": "hesitates when the room rewards speed over synthesis",
+      "emotional_motivation_safe": "wants a small school to be seen as thoughtful, not merely lucky",
+      "relationship_to_protagonist_team": "mirror for Haru's team-first reasoning",
+      "signature_phrase": "A good answer should bring everyone with it.",
+      "first_impression": "quiet warmth hiding tournament steel",
+      "hidden_vulnerability": "sealed",
+      "growth_moment": "sealed"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "qa_summary",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "checks": [
+    {
+      "name": "source grounding",
+      "status": "pass",
+      "details": "All prompts cite source_pdf refs; Chapter 7 reversible-computation grounding was added."
+    },
+    {
+      "name": "story quality",
+      "status": "pass",
+      "details": "Sessions connect learning gates to team/rival beats."
+    },
+    {
+      "name": "rival school depth",
+      "status": "pass",
+      "details": "Four rival schools have safe public arcs and sealed spoiler details."
+    },
+    {
+      "name": "spoiler control",
+      "status": "pass",
+      "details": "Public scenario and prompt wording were redacted; final result, route, hidden motivations, and decisive details remain sealed."
+    },
+    {
+      "name": "prompt evaluation",
+      "status": "pass",
+      "details": "Answer reveal no longer clears a prompt by itself; prompt-specific open drafts and clean retry are implemented."
+    },
+    {
+      "name": "browser execution",
+      "status": "partial",
+      "details": "In-app browser was unavailable in this session; JavaScript modules and core state/evaluator logic were loaded through the local JS runtime."
+    },
+    {
+      "name": "character consistency",
+      "status": "partial",
+      "details": "One shared generated character sheet anchors base-team appearance; individual variants deferred."
+    },
+    {
+      "name": "Git tracking assumptions",
+      "status": "pass",
+      "details": ".gitignore does not ignore generated/data/sealed/ and source PDFs remain ignored."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "coverage_report",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "source_coverage_quality": "broad spine coverage",
+  "pdf_used": true,
+  "external_context_used": false,
+  "external_context_note": "context/references.md existed but had no content.",
+  "chapters_covered": [
+    {
+      "chapter": 1,
+      "coverage": "state language, operators, oscillator, density operator"
+    },
+    {
+      "chapter": 2,
+      "coverage": "radiation quantization and field states"
+    },
+    {
+      "chapter": 3,
+      "coverage": "Rabi dynamics and Jaynes-Cummings model"
+    },
+    {
+      "chapter": 4,
+      "coverage": "reservoirs, master equations, decoherence"
+    },
+    {
+      "chapter": 5,
+      "coverage": "cavity QED and loss/coherent exchange"
+    },
+    {
+      "chapter": 6,
+      "coverage": "atomic media and EIT-style propagation"
+    },
+    {
+      "chapter": 7,
+      "coverage": "classical bits, circuits, resources, and reversible computation"
+    },
+    {
+      "chapter": 8,
+      "coverage": "qubits, gates, no-cloning, entanglement, protocols"
+    },
+    {
+      "chapter": 9,
+      "coverage": "algorithms and error correction"
+    },
+    {
+      "chapter": 10,
+      "coverage": "physical implementation requirements"
+    }
+  ],
+  "prompt_source_labels": {
+    "source_pdf": 31,
+    "external_context": 0,
+    "model_inference": 0
+  },
+  "warnings": [
+    "The source textbook is large; this MVP samples the main conceptual arc rather than exhaustively extracting every equation.",
+    "Figure coverage now names representative figure groups, but exact figure-level extraction remains a future knowledge pass."
+  ]
+}

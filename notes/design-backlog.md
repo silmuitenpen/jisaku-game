@@ -152,3 +152,13 @@ After the first generated game, check:
 * Did spoiler-safe review actually avoid major spoilers?
 * Was `generated/data/sealed/` useful or annoying?
 * What should be promoted from this backlog into `spec.md`?
+
+---
+
+## 9. First Generated MVP Follow-Ups (2026-06-18)
+
+* Split the generated character sheet into individual portrait assets and add expression variants.
+* Add optional visual figure rounds after extracting selected PDF figures safely.
+* Consider a post-completion in-app spoiler unlock that reads sealed final-route data only after the player clears all sessions.
+* Expand the final implementation session with more physical-platform comparison prompts.
+* Add keyboard shortcuts and richer accessibility labels in the next app pass.

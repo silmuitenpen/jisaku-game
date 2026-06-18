@@ -1,0 +1,220 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "source_refs",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "primary_source": {
+    "id": "textbook_pdf",
+    "label": "source_pdf",
+    "title": "Fundamentals of Quantum Optics and Quantum Information",
+    "authors": [
+      "Peter Lambropoulos",
+      "David Petrosyan"
+    ],
+    "file": "source/textbook.pdf",
+    "pdf_pages": 326,
+    "notes": "Text extracted locally with Poppler pdftotext. Optional context/references.md existed but was empty."
+  },
+  "refs": [
+    {
+      "id": "ref_ch1_framework",
+      "label": "source_pdf",
+      "chapter": 1,
+      "book_page_range": "5-18",
+      "pdf_page_start": 15,
+      "title": "Quantum mechanical background: vector spaces, bases, operators",
+      "anchor_terms": [
+        "complex vector space",
+        "basis",
+        "linear operator",
+        "Hermitian operator"
+      ],
+      "pdf_page_end": 27
+    },
+    {
+      "id": "ref_ch1_oscillator",
+      "label": "source_pdf",
+      "chapter": 1,
+      "book_page_range": "18-36",
+      "pdf_page_start": 28,
+      "title": "Observables, harmonic oscillator, ladder operators, coherent states",
+      "anchor_terms": [
+        "Hamiltonian",
+        "commutator",
+        "annihilation operator",
+        "coherent states"
+      ],
+      "pdf_page_end": 45
+    },
+    {
+      "id": "ref_ch1_density",
+      "label": "source_pdf",
+      "chapter": 1,
+      "book_page_range": "36-42",
+      "pdf_page_start": 46,
+      "title": "Density operator, pure and mixed states, reduced density operator",
+      "anchor_terms": [
+        "density operator",
+        "pure state",
+        "mixed state",
+        "partial trace"
+      ],
+      "pdf_page_end": 53
+    },
+    {
+      "id": "ref_ch2_radiation",
+      "label": "source_pdf",
+      "chapter": 2,
+      "book_page_range": "45-71",
+      "pdf_page_start": 54,
+      "title": "Quantum theory of radiation and field states",
+      "anchor_terms": [
+        "field quantization",
+        "cavity",
+        "number state",
+        "correlation functions"
+      ],
+      "pdf_page_end": 81
+    },
+    {
+      "id": "ref_ch3_atom_field",
+      "label": "source_pdf",
+      "chapter": 3,
+      "book_page_range": "73-116",
+      "pdf_page_start": 82,
+      "title": "Atom in an external radiation field; Rabi and Jaynes-Cummings models",
+      "anchor_terms": [
+        "two-level atom",
+        "Rabi frequency",
+        "Jaynes-Cummings model",
+        "three-level atom"
+      ],
+      "pdf_page_end": 126
+    },
+    {
+      "id": "ref_ch4_reservoir",
+      "label": "source_pdf",
+      "chapter": 4,
+      "book_page_range": "119-149",
+      "pdf_page_start": 127,
+      "title": "System-reservoir interaction and master equation",
+      "anchor_terms": [
+        "master equation",
+        "Born approximation",
+        "Markov approximation",
+        "reduced density operator",
+        "quantum jumps"
+      ],
+      "pdf_page_end": 157
+    },
+    {
+      "id": "ref_ch5_cavity",
+      "label": "source_pdf",
+      "chapter": 5,
+      "book_page_range": "151-176",
+      "pdf_page_start": 158,
+      "title": "Cavity QED, damped cavities, and single photons on demand",
+      "anchor_terms": [
+        "cavity field",
+        "damped cavity",
+        "vacuum Rabi",
+        "single photons"
+      ],
+      "pdf_page_end": 184
+    },
+    {
+      "id": "ref_ch6_media",
+      "label": "source_pdf",
+      "chapter": 6,
+      "book_page_range": "179-197",
+      "pdf_page_start": 185,
+      "title": "Field propagation in atomic media",
+      "anchor_terms": [
+        "slowly varying electric field",
+        "two-level medium",
+        "three-level medium",
+        "EIT"
+      ],
+      "pdf_page_end": 205
+    },
+    {
+      "id": "ref_ch7_classical_computation",
+      "label": "source_pdf",
+      "chapter": 7,
+      "book_page_range": "203-210",
+      "pdf_page_start": 206,
+      "pdf_page_end": 213,
+      "title": "Elements of classical computation, circuits, resources, and reversible computation",
+      "anchor_terms": [
+        "bits and memory",
+        "wires and gates",
+        "computational resources",
+        "reversible computation"
+      ]
+    },
+    {
+      "id": "ref_ch8_qubits",
+      "label": "source_pdf",
+      "chapter": 8,
+      "book_page_range": "211-227",
+      "pdf_page_start": 214,
+      "title": "Qubits, quantum circuits, no-cloning, physical qubits",
+      "anchor_terms": [
+        "qubit",
+        "quantum gates",
+        "measurement",
+        "no-cloning"
+      ],
+      "pdf_page_end": 228
+    },
+    {
+      "id": "ref_ch8_entanglement",
+      "label": "source_pdf",
+      "chapter": 8,
+      "book_page_range": "226-248",
+      "pdf_page_start": 229,
+      "title": "Entanglement, teleportation, cryptography, Bell inequality, entropy",
+      "anchor_terms": [
+        "Bell states",
+        "teleportation",
+        "BB84",
+        "Bell's inequality",
+        "entropy"
+      ],
+      "pdf_page_end": 252
+    },
+    {
+      "id": "ref_ch9_computation",
+      "label": "source_pdf",
+      "chapter": 9,
+      "book_page_range": "251-279",
+      "pdf_page_start": 253,
+      "title": "Quantum algorithms, simulation, and error correction",
+      "anchor_terms": [
+        "Deutsch algorithm",
+        "Grover algorithm",
+        "Quantum Fourier Transform",
+        "error correction"
+      ],
+      "pdf_page_end": 281
+    },
+    {
+      "id": "ref_ch10_implementation",
+      "label": "source_pdf",
+      "chapter": 10,
+      "book_page_range": "281-309",
+      "pdf_page_start": 282,
+      "title": "Physical implementations and DiVincenzo-style requirements",
+      "anchor_terms": [
+        "physical implementations",
+        "ion-trap",
+        "cavity QED",
+        "optical quantum computer"
+      ],
+      "pdf_page_end": 310
+    }
+  ]
+}

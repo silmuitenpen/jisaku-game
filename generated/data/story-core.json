@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "story_core",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "scientific_core_question": {
+    "label": "model_inference",
+    "text": "When can a quantum-information claim survive contact with the physical conditions of quantum optics: basis choice, measurement, approximations, dissipation, and implementation limits?",
+    "source_refs": [
+      "ref_ch1_framework",
+      "ref_ch4_reservoir",
+      "ref_ch10_implementation"
+    ]
+  },
+  "emotional_core": {
+    "label": "model_inference",
+    "text": "A first-year protagonist refuses to pretend she understands; the team learns that careful questions about assumptions can matter more than fast recitation."
+  },
+  "previous_failure_connection": {
+    "label": "model_inference",
+    "safe_summary": "Last year's team lost after giving a brilliant calculation without stating the regime in which it was valid.",
+    "source_refs": [
+      "ref_ch3_atom_field",
+      "ref_ch4_reservoir",
+      "ref_ch5_cavity"
+    ]
+  },
+  "inheritance_question": {
+    "label": "model_inference",
+    "text": "The senior passes down not an answer, but a habit: name the space, name the approximation, and name what would break it."
+  },
+  "final_conflict": {
+    "label": "model_inference",
+    "safe_summary": "The final session asks the team to synthesize quantum-state language, light-matter dynamics, decoherence, and implementation requirements without overclaiming.",
+    "spoiler_control": "Final result and decisive dialogue are sealed."
+  },
+  "likely_rival_styles": [
+    "calculation_style",
+    "skeptical_style",
+    "experiment_style",
+    "synthesis_style",
+    "modern_research_style"
+  ],
+  "possible_scientific_turning_points": [
+    {
+      "label": "source_pdf",
+      "text": "A reduced density operator is needed when a subsystem is entangled with an unobserved system.",
+      "source_refs": [
+        "ref_ch1_density"
+      ]
+    },
+    {
+      "label": "source_pdf",
+      "text": "Coherent exchange in a cavity must be compared against damping and spontaneous decay.",
+      "source_refs": [
+        "ref_ch5_cavity"
+      ]
+    },
+    {
+      "label": "source_pdf",
+      "text": "No-cloning and measurement limits change what counts as information processing.",
+      "source_refs": [
+        "ref_ch8_qubits"
+      ]
+    },
+    {
+      "label": "source_pdf",
+      "text": "Implementation claims must satisfy physical requirements, not just circuit diagrams.",
+      "source_refs": [
+        "ref_ch10_implementation"
+      ]
+    }
+  ]
+}

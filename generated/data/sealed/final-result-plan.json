@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "final_result_plan",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference.",
+    "spoiler_warning": "Do not open unless you want story spoilers."
+  },
+  "warning": "Do not open unless you want story spoilers.",
+  "route_model": "weighted_random_with_story_constraints",
+  "sealed_final_result": "SEALED final placement/result.",
+  "allowed_outcomes": [
+    "narrow_win",
+    "meaningful_loss",
+    "relay_success",
+    "unresolved_rivalry"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "metadata",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "title": "Photon Relay: The Question Sayo Left Behind",
+  "configuration": {
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "regen_target": "continue",
+    "review_knowledge": true,
+    "review_story_core": true,
+    "review_rival_school_arcs": false,
+    "review_drama_beats": "safe_summary_only",
+    "review_session_plan": "safe_summary_only",
+    "review_scenario": false,
+    "review_assets": true,
+    "review_technical": true
+  },
+  "source": {
+    "id": "textbook_pdf",
+    "label": "source_pdf",
+    "title": "Fundamentals of Quantum Optics and Quantum Information",
+    "authors": [
+      "Peter Lambropoulos",
+      "David Petrosyan"
+    ],
+    "file": "source/textbook.pdf",
+    "pdf_pages": 326,
+    "notes": "Text extracted locally with Poppler pdftotext. Optional context/references.md existed but was empty."
+  },
+  "counts": {
+    "knowledge_units": 13,
+    "sessions": 5,
+    "prompts": 31,
+    "rival_schools": 4,
+    "base_team_characters": 4,
+    "rivals": 4
+  },
+  "spoiler_control": {
+    "public_review_dir": "generated/data/public-review/",
+    "sealed_dir": "generated/data/sealed/",
+    "normal_review_hides": [
+      "rival school twists",
+      "final result",
+      "ending route",
+      "hidden rival motivations",
+      "decisive scene dialogue"
+    ]
+  }
+}

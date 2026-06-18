@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "rival_school_arcs_public",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "spoiler_policy": "Safe summaries only. Hidden motivations, twists, final payoffs, and decisive dialogue are sealed.",
+  "schools": [
+    {
+      "school_id": "seiran",
+      "school_name": "Seiran Institute",
+      "region_or_background": "urban powerhouse with a long olympiad record",
+      "team_identity": "formal proof and operator-algebra precision",
+      "team_history_safe": "defeated Sakuraba last year in a validity-condition discussion",
+      "current_goal_safe": "defend the school's reputation without reducing science to speed",
+      "internal_tension_safe": "calculation elegance versus physical humility",
+      "key_members": [
+        "natsuki"
+      ],
+      "reason_to_win_safe": "their inheritance is a demand for exactness that can be honorable when tempered",
+      "what_they_inherited_safe": "a culture of naming mathematical structure first",
+      "trying_to_overcome_safe": "the risk that proof style becomes emotional armor",
+      "relationship_to_protagonist_team": "primary benchmark and old wound",
+      "why_player_might_support_them": "they respect the science and force every answer to be precise",
+      "pdf_content_connection": [
+        "ref_ch1_framework",
+        "ref_ch10_implementation"
+      ]
+    },
+    {
+      "school_id": "kuroha",
+      "school_name": "Kuroha Academy",
+      "region_or_background": "small private school known for debate-style exams",
+      "team_identity": "skeptical cross-examination",
+      "team_history_safe": "often loses points for refusing overconfident claims",
+      "current_goal_safe": "prove that asking about limitations is a form of courage",
+      "internal_tension_safe": "doubt as protection versus doubt as self-sabotage",
+      "key_members": [
+        "mio"
+      ],
+      "reason_to_win_safe": "they want approximation conditions to be taken seriously",
+      "what_they_inherited_safe": "a tradition of challenging hidden assumptions",
+      "trying_to_overcome_safe": "being treated as negative instead of rigorous",
+      "relationship_to_protagonist_team": "an uneasy ally against shallow answers",
+      "why_player_might_support_them": "they ask the questions that prevent false victory",
+      "pdf_content_connection": [
+        "ref_ch4_reservoir",
+        "ref_ch5_cavity"
+      ]
+    },
+    {
+      "school_id": "minato",
+      "school_name": "Minato Experimental High",
+      "region_or_background": "coastal school with a student optics lab",
+      "team_identity": "apparatus-first physical implementation",
+      "team_history_safe": "strong in demonstrations, sometimes underestimated in theory rounds",
+      "current_goal_safe": "make the judges value experimental constraints as theory constraints",
+      "internal_tension_safe": "clean abstraction versus experimental messiness",
+      "key_members": [
+        "touko"
+      ],
+      "reason_to_win_safe": "they compete for every student who learned from a failed setup",
+      "what_they_inherited_safe": "a lab notebook full of losses that became calibration",
+      "trying_to_overcome_safe": "the idea that implementation details are secondary",
+      "relationship_to_protagonist_team": "pushes Sakuraba to ground equations in physical devices",
+      "why_player_might_support_them": "they make the book's implementation chapters feel alive",
+      "pdf_content_connection": [
+        "ref_ch3_atom_field",
+        "ref_ch10_implementation"
+      ]
+    },
+    {
+      "school_id": "akebono",
+      "school_name": "Akebono Rural Science Club",
+      "region_or_background": "rural public school with limited equipment but fierce mutual trust",
+      "team_identity": "synthesis and explanation",
+      "team_history_safe": "arrives as an underdog whose strength is team translation",
+      "current_goal_safe": "show that careful explanation can belong on the final stage",
+      "internal_tension_safe": "warmth versus competitive urgency",
+      "key_members": [
+        "yui"
+      ],
+      "reason_to_win_safe": "their school needs proof that slow understanding can still be excellent",
+      "what_they_inherited_safe": "a borrowed textbook annotated by several graduating classes",
+      "trying_to_overcome_safe": "resource limits and the room's bias toward polished programs",
+      "relationship_to_protagonist_team": "parallel team that makes Haru feel less alone",
+      "why_player_might_support_them": "their dream is generous, not small",
+      "pdf_content_connection": [
+        "ref_ch8_entanglement",
+        "ref_ch9_computation"
+      ]
+    }
+  ]
+}

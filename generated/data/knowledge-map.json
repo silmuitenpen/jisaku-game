@@ -1,0 +1,624 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "knowledge_map",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "source_summary": {
+    "label": "source_pdf",
+    "central_thread": "The book builds from quantum-mechanical state language to quantum optics and then to physical quantum-information processing.",
+    "coverage_strategy": "Five game sessions sample the book's main spine rather than attempting exhaustive coverage of all 326 PDF pages.",
+    "coverage_strategy_label": "model_inference"
+  },
+  "learning_units": [
+    {
+      "id": "ku_01_state_language",
+      "title": "Quantum states live in vector spaces",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_framework"
+      ],
+      "major_concepts": [
+        "complex vector spaces",
+        "basis decomposition",
+        "tensor-product spaces",
+        "Dirac ket/bra notation"
+      ],
+      "definitions": [
+        "A basis lets a state be decomposed into coefficients on basis vectors.",
+        "Tensor-product spaces describe compound systems and set up the language of entanglement."
+      ],
+      "equations": [
+        "|phi> = sum_i c_i |e_i>",
+        "<e_i|e_j> = delta_ij"
+      ],
+      "assumptions": [
+        "The physical state space is linear and supports a scalar product."
+      ],
+      "validity_conditions": [
+        "Basis expansion requires a complete orthonormal basis for the relevant space."
+      ],
+      "limitations": [
+        "Vector-space notation predicts measurement statistics but does not by itself explain measurement philosophy."
+      ],
+      "common_misconceptions": [
+        "A vector component is not automatically a measured value; probabilities come from amplitudes and operators."
+      ],
+      "figures_or_captions": [],
+      "prompt_ids": [
+        "p01_ket",
+        "p02_hermitian",
+        "p25_reversible"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_02_observables",
+      "title": "Observables are operators, and commutators matter",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_framework",
+        "ref_ch1_oscillator"
+      ],
+      "major_concepts": [
+        "Hermitian operators",
+        "eigenvalues",
+        "commutators",
+        "measurement probabilities"
+      ],
+      "definitions": [
+        "Hermitian observables have real eigenvalues.",
+        "Non-commuting observables encode measurement limits and incompatible descriptions."
+      ],
+      "equations": [
+        "[A,B] = AB - BA",
+        "[Q,P] = i hbar I"
+      ],
+      "assumptions": [
+        "Physical observables are represented by Hermitian operators."
+      ],
+      "validity_conditions": [
+        "Operator domains and basis choices must match the physical system."
+      ],
+      "limitations": [
+        "Treating operators as ordinary numbers hides ordering effects."
+      ],
+      "common_misconceptions": [
+        "Changing the order of non-commuting operators is harmless."
+      ],
+      "figures_or_captions": [],
+      "prompt_ids": [
+        "p01_ket",
+        "p02_hermitian",
+        "p03_commutator",
+        "p04_ground_energy",
+        "p07_modes",
+        "p09_coherent_eigen",
+        "p25_reversible"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_03_harmonic_oscillator",
+      "title": "The harmonic oscillator is a reusable quantum building block",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_oscillator"
+      ],
+      "major_concepts": [
+        "Hamiltonian",
+        "ladder operators",
+        "number states",
+        "coherent states"
+      ],
+      "definitions": [
+        "Creation and annihilation operators raise and lower number states.",
+        "Coherent states are eigenstates of the annihilation operator and approximate classical fields."
+      ],
+      "equations": [
+        "H = hbar omega (N + 1/2)",
+        "[a,a^dagger] = 1",
+        "a|alpha> = alpha|alpha>"
+      ],
+      "assumptions": [
+        "The oscillator Hamiltonian is quadratic in position and momentum."
+      ],
+      "validity_conditions": [
+        "The number-state ladder relies on the oscillator algebra."
+      ],
+      "limitations": [
+        "Coherent states are not number states and do not have definite photon number."
+      ],
+      "common_misconceptions": [
+        "A coherent state is simply a large-number Fock state."
+      ],
+      "figures_or_captions": [
+        "Fig. 1.1: harmonic-oscillator amplitudes and uncertainties for coherent/squeezed states."
+      ],
+      "prompt_ids": [
+        "p03_commutator",
+        "p04_ground_energy",
+        "p07_modes",
+        "p09_coherent_eigen"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_04_density_operator",
+      "title": "Density operators handle mixtures and subsystems",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch1_density"
+      ],
+      "major_concepts": [
+        "pure states",
+        "mixed states",
+        "reduced density operator",
+        "partial trace"
+      ],
+      "definitions": [
+        "A pure state can be written rho = |psi><psi|.",
+        "The reduced density operator of a subsystem is obtained by tracing over the other subsystem."
+      ],
+      "equations": [
+        "rho = |psi><psi|",
+        "<A> = Tr(rho A)",
+        "rho_A = Tr_B(rho)"
+      ],
+      "assumptions": [
+        "Subsystems may be entangled with unobserved degrees of freedom."
+      ],
+      "validity_conditions": [
+        "A subsystem description must use the reduced density operator when the full state is inseparable."
+      ],
+      "limitations": [
+        "A mixed density matrix is not just ignorance in every physical context; it can arise from entanglement."
+      ],
+      "common_misconceptions": [
+        "If the whole system is pure, every subsystem must also be pure."
+      ],
+      "figures_or_captions": [],
+      "prompt_ids": [
+        "p05_density_pure",
+        "p06_partial_trace",
+        "p18_reduced_state"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_05_quantized_radiation",
+      "title": "Radiation modes quantize like oscillators",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch2_radiation"
+      ],
+      "major_concepts": [
+        "field quantization",
+        "cavity modes",
+        "number states",
+        "coherent states",
+        "correlation functions"
+      ],
+      "definitions": [
+        "A field mode can be represented by oscillator-like creation and annihilation operators.",
+        "Photon counting and correlation functions reveal quantum statistical properties of light."
+      ],
+      "equations": [
+        "E-field mode energy resembles hbar omega (n + 1/2)",
+        "G^(1), G^(2) correlation functions"
+      ],
+      "assumptions": [
+        "Mode decomposition and boundary conditions define the field degrees of freedom."
+      ],
+      "validity_conditions": [
+        "Cavity and open-space quantization use different mode structures."
+      ],
+      "limitations": [
+        "Classical intensity language misses photon statistics and field-state distinctions."
+      ],
+      "common_misconceptions": [
+        "All bright light can be treated as a classical wave without loss of relevant information."
+      ],
+      "figures_or_captions": [
+        "Fig. 2.1: cubic quantization volume with periodic boundary conditions.",
+        "Fig. 2.2: one-dimensional optical cavity.",
+        "Fig. 2.3: photon probability distributions for coherent and chaotic fields.",
+        "Fig. 2.4: photon detection schemes."
+      ],
+      "prompt_ids": [
+        "p07_modes",
+        "p08_number_state",
+        "p09_coherent_eigen",
+        "p12_coherent_vs_number"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_06_atom_field",
+      "title": "Atom-field interaction turns spectral structure into dynamics",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch3_atom_field"
+      ],
+      "major_concepts": [
+        "two-level atom",
+        "Rabi frequency",
+        "detuning",
+        "Jaynes-Cummings model",
+        "three-level atoms"
+      ],
+      "definitions": [
+        "Rabi frequency sets the coherent oscillation rate driven by a near-resonant field.",
+        "The Jaynes-Cummings model treats a two-level atom coupled to a quantized mode."
+      ],
+      "equations": [
+        "Omega = dipole_field_coupling / hbar",
+        "|e,n> <-> |g,n+1> exchange"
+      ],
+      "assumptions": [
+        "Near-resonance and rotating-wave style approximations are used for tractable two-level dynamics."
+      ],
+      "validity_conditions": [
+        "The two-level approximation must be justified by transition selection and detuning."
+      ],
+      "limitations": [
+        "Strong fields may be treated classically, but few-photon effects need quantized-field treatment."
+      ],
+      "common_misconceptions": [
+        "A classical drive and a quantized single mode always predict the same atom behavior."
+      ],
+      "figures_or_captions": [
+        "Fig. 3.1: two-level atom interacting with a monochromatic field.",
+        "Fig. 3.2: Rabi population dynamics.",
+        "Fig. 3.3: inversion dynamics for quantized-field cases.",
+        "Fig. 3.6: three-level atom configurations.",
+        "Fig. 3.7: simulated Raman adiabatic passage."
+      ],
+      "prompt_ids": [
+        "p10_rabi",
+        "p11_jc_exchange"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_07_open_systems",
+      "title": "Reservoir coupling makes approximation conditions decisive",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch4_reservoir"
+      ],
+      "major_concepts": [
+        "reservoir",
+        "Born-Markov approximation",
+        "master equation",
+        "quantum stochastic wavefunctions"
+      ],
+      "definitions": [
+        "A master equation evolves the reduced density operator of a small system coupled to a reservoir.",
+        "Quantum jumps simulate dissipative evolution as stochastic pure-state trajectories."
+      ],
+      "equations": [
+        "d rho_S / dt = master_equation_terms",
+        "H_eff = H - i loss_terms"
+      ],
+      "assumptions": [
+        "Weak coupling, short reservoir memory, and limited back-action on the reservoir."
+      ],
+      "validity_conditions": [
+        "Markovian models require reservoir correlation times short compared with system evolution."
+      ],
+      "limitations": [
+        "The approximation can fail when the environment has memory or strong structured coupling."
+      ],
+      "common_misconceptions": [
+        "Adding decay is only a numerical detail, not a conceptual change."
+      ],
+      "figures_or_captions": [
+        "Fig. 4.1: driven two-level atom populations under decay and detuning.",
+        "Fig. 4.2-Fig. 4.3: Monte-Carlo quantum trajectories and ensemble averages."
+      ],
+      "prompt_ids": [
+        "p13_reservoir",
+        "p14_born_markov",
+        "p15_decoherence",
+        "p18_reduced_state",
+        "p30_final_synthesis"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "model_inference"
+    },
+    {
+      "id": "ku_08_cavity_qed",
+      "title": "Cavity QED exposes the competition between coherent exchange and loss",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch5_cavity"
+      ],
+      "major_concepts": [
+        "cavity damping",
+        "vacuum Rabi oscillation",
+        "strong coupling",
+        "single-photon generation"
+      ],
+      "definitions": [
+        "Vacuum Rabi oscillations exchange an excitation between atom and cavity mode.",
+        "Single photons on demand require timing and loss control, not just emission."
+      ],
+      "equations": [
+        "g compared with kappa and Gamma",
+        "coherent-state amplitude decays under damping"
+      ],
+      "assumptions": [
+        "A single relevant cavity mode and controlled atom-cavity coupling."
+      ],
+      "validity_conditions": [
+        "Strong-coupling behavior requires coherent exchange faster than loss."
+      ],
+      "limitations": [
+        "Damping can hide coherent oscillations even when the underlying coupling exists."
+      ],
+      "common_misconceptions": [
+        "A cavity automatically preserves a photon just because it confines a mode."
+      ],
+      "figures_or_captions": [
+        "Fig. 5.1: two-level atom in a cavity.",
+        "Fig. 5.2: damped atom-cavity dynamics.",
+        "Fig. 5.3-Fig. 5.5: single-photon source and intracavity STIRAP schemes."
+      ],
+      "prompt_ids": [
+        "p16_cavity_loss"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_09_media",
+      "title": "Propagation in media depends on coupled field-atom evolution",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch6_media"
+      ],
+      "major_concepts": [
+        "slowly varying field",
+        "two-level medium",
+        "three-level medium",
+        "EIT",
+        "slow light"
+      ],
+      "definitions": [
+        "The field and atomic medium must be evolved self-consistently.",
+        "Three-level media can support transparency and pulse slowing under controlled driving."
+      ],
+      "equations": [
+        "Maxwell-Bloch style coupled equations",
+        "group velocity controlled by coupling fields"
+      ],
+      "assumptions": [
+        "Weak probe fields and slowly varying envelopes are typical simplifying conditions."
+      ],
+      "validity_conditions": [
+        "Adiabatic following and resonance conditions matter for EIT-like behavior."
+      ],
+      "limitations": [
+        "Turning off a drive too fast or leaving resonance can destroy the intended propagation effect."
+      ],
+      "common_misconceptions": [
+        "A medium is just a passive index of refraction in quantum optical propagation."
+      ],
+      "figures_or_captions": [
+        "Fig. 6.1: two-level medium absorption and dispersion spectra.",
+        "Fig. 6.2: electromagnetically induced transparency scheme.",
+        "Fig. 6.3: three-level medium absorption and dispersion spectra."
+      ],
+      "prompt_ids": [
+        "p17_eit"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "model_inference"
+    },
+    {
+      "id": "ku_10_qubits_entanglement",
+      "title": "Qubits make information physical",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch8_qubits",
+        "ref_ch8_entanglement"
+      ],
+      "major_concepts": [
+        "qubits",
+        "gates",
+        "measurement",
+        "no-cloning",
+        "Bell states",
+        "teleportation"
+      ],
+      "definitions": [
+        "A qubit is a two-state quantum system used as a memory and processing unit.",
+        "No-cloning forbids an operation that copies an arbitrary unknown quantum state."
+      ],
+      "equations": [
+        "|psi> = alpha|0> + beta|1>",
+        "Bell states as entangled two-qubit states"
+      ],
+      "assumptions": [
+        "Quantum information protocols rely on coherent control and well-defined measurement bases."
+      ],
+      "validity_conditions": [
+        "Cloning restrictions apply to arbitrary unknown states, not known classical labels."
+      ],
+      "limitations": [
+        "Entanglement enables protocols but is fragile under decoherence."
+      ],
+      "common_misconceptions": [
+        "Teleportation transmits matter or a usable signal faster than light."
+      ],
+      "figures_or_captions": [
+        "Fig. 8.1-Fig. 8.4: one-, two-, and three-qubit gate circuits.",
+        "Fig. 8.5-Fig. 8.6: measurement symbol and observable-measurement circuit.",
+        "Fig. 8.7 and following figures: single-photon interference and protocol circuits."
+      ],
+      "prompt_ids": [
+        "p15_decoherence",
+        "p19_qubit",
+        "p20_no_cloning",
+        "p21_bell",
+        "p22_measurement",
+        "p23_protocol_match",
+        "p24_bell_limit",
+        "p28_error_correction"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "source_pdf"
+    },
+    {
+      "id": "ku_10a_classical_reversible",
+      "title": "Classical reversible computation sets up quantum circuit constraints",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch7_classical_computation"
+      ],
+      "major_concepts": [
+        "bits",
+        "circuits",
+        "computational resources",
+        "reversible computation"
+      ],
+      "definitions": [
+        "Classical computation is framed as data processing through wires, gates, and memory.",
+        "Reversible computation prepares the conceptual bridge to unitary quantum gates."
+      ],
+      "equations": [],
+      "equations_label": "source_pdf",
+      "assumptions": [
+        "The computation model is expressed in terms of discrete data and gate operations."
+      ],
+      "validity_conditions": [
+        "Reversible logic must preserve enough information to reconstruct the input from the output."
+      ],
+      "limitations": [
+        "This unit is a bridge; quantum speedup claims require the later quantum-computation chapters."
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions": [
+        "Reversibility is not the same as making a computation faster."
+      ],
+      "common_misconceptions_label": "model_inference",
+      "figures_or_captions": [],
+      "prompt_ids": [
+        "p25_reversible"
+      ]
+    },
+    {
+      "id": "ku_11_algorithms_error",
+      "title": "Quantum computation wins only under careful structure and protection",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch7_classical_computation",
+        "ref_ch9_computation"
+      ],
+      "major_concepts": [
+        "Deutsch algorithm",
+        "Deutsch-Jozsa algorithm",
+        "Grover search",
+        "QFT",
+        "quantum error correction"
+      ],
+      "definitions": [
+        "Grover search provides a quadratic speedup for unstructured search.",
+        "Quantum error correction diagnoses error syndromes without reading the encoded quantum information directly."
+      ],
+      "equations": [
+        "Hadamard-oracle-Hadamard patterns",
+        "QFT maps amplitudes through phase structure"
+      ],
+      "assumptions": [
+        "Algorithms require coherent gates and a suitable oracle or problem encoding."
+      ],
+      "validity_conditions": [
+        "A speedup claim depends on the problem model and available oracle assumptions."
+      ],
+      "limitations": [
+        "Error correction adds overhead and depends on noise assumptions."
+      ],
+      "common_misconceptions": [
+        "A quantum computer makes every computational task exponentially faster."
+      ],
+      "figures_or_captions": [
+        "Chapter 9 circuit figures: Deutsch, Deutsch-Jozsa, Grover, QFT, and error-correction examples."
+      ],
+      "prompt_ids": [
+        "p25_reversible",
+        "p26_grover",
+        "p27_qft",
+        "p28_error_correction",
+        "p30_final_synthesis"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "model_inference"
+    },
+    {
+      "id": "ku_12_implementation",
+      "title": "Physical implementation ties the whole book together",
+      "source_label": "source_pdf",
+      "source_refs": [
+        "ref_ch10_implementation"
+      ],
+      "major_concepts": [
+        "implementation requirements",
+        "cavity QED",
+        "ion traps",
+        "optical quantum computing",
+        "quantum dots"
+      ],
+      "definitions": [
+        "A physical quantum computer needs scalable qubits, initialization, gate control, long coherence, and readout.",
+        "Quantum optics supplies many proof-of-principle platforms for quantum information processing."
+      ],
+      "equations": [
+        "gate time much shorter than decoherence time",
+        "error probability thresholds as design targets"
+      ],
+      "assumptions": [
+        "The abstract circuit model must be mapped to a controllable physical platform."
+      ],
+      "validity_conditions": [
+        "Implementation claims need both coherent dynamics and quantified loss/error channels."
+      ],
+      "limitations": [
+        "A beautiful Hamiltonian is insufficient if initialization, readout, or decoherence control fail."
+      ],
+      "common_misconceptions": [
+        "Any observed entanglement is already a scalable quantum computer."
+      ],
+      "figures_or_captions": [
+        "Chapter 10 implementation figures: cavity, ion-trap, optical, and quantum-dot implementation schemes."
+      ],
+      "prompt_ids": [
+        "p29_requirements",
+        "p30_final_synthesis"
+      ],
+      "limitations_label": "model_inference",
+      "common_misconceptions_label": "model_inference",
+      "equations_label": "model_inference"
+    }
+  ]
+}

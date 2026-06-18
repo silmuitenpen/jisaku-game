@@ -1,0 +1,299 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "session_plan_full",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference.",
+    "spoiler_warning": "Do not open unless you want story spoilers."
+  },
+  "sessions": [
+    {
+      "id": "session_01",
+      "title": "Qualifier: The Space Before the Answer",
+      "source_refs": [
+        "ref_ch1_framework",
+        "ref_ch1_oscillator",
+        "ref_ch1_density"
+      ],
+      "opening_scene": [
+        {
+          "speaker": "narration",
+          "text": "The regional hall smelled like chalk dust, polished floor wax, and the kind of silence that made every page turn sound official."
+        },
+        {
+          "speaker": "haru",
+          "text": "If I do not understand the notation, I am going to say so. Even if everyone hears me."
+        },
+        {
+          "speaker": "minori",
+          "text": "Good. A wrong silence costs more than a wrong answer."
+        }
+      ],
+      "official_briefing": {
+        "speaker": "Senior Examiner",
+        "topic": "state vectors, operators, and density operators",
+        "text": "This foundation round tests the language of quantum mechanics: vector spaces, basis expansion, observables as operators, oscillator algebra, and density operators. Do not assume a symbol is a number just because it fits on one line. Ask what space it acts on, what basis is being used, and whether a subsystem has been separated from something unobserved.",
+        "what_not_to_assume": "Do not treat non-commuting operators like ordinary algebraic variables."
+      },
+      "mid_scene_reaction": [
+        {
+          "speaker": "rikka",
+          "text": "The answer is short. The missing reason is not."
+        },
+        {
+          "speaker": "haru",
+          "text": "Then I want the reason. If we cannot say it, we do not have it yet."
+        }
+      ],
+      "rival_pressure_scene": [
+        {
+          "speaker": "natsuki",
+          "text": "Sakuraba is slower this year."
+        },
+        {
+          "speaker": "minori",
+          "text": "Sakuraba is naming its assumptions this year."
+        }
+      ],
+      "breakthrough_scene": [
+        {
+          "speaker": "haru",
+          "text": "A state is not just an answer waiting to be read. It is a promise about what measurements can mean."
+        },
+        {
+          "speaker": "sayo",
+          "text": "That is the first page of the notebook I wanted to leave behind."
+        }
+      ],
+      "notebook_update": "Haru writes: name the space, then the basis, then what the operator is allowed to do.",
+      "next_hook": "Seiran's captain smiles at the oscillator board as if the next round has already begun."
+    },
+    {
+      "id": "session_02",
+      "title": "Semifinal Pool: Light With Teeth",
+      "source_refs": [
+        "ref_ch2_radiation",
+        "ref_ch3_atom_field"
+      ],
+      "opening_scene": [
+        {
+          "speaker": "narration",
+          "text": "The second hall had a darkened demonstration bench. One covered cavity sat beneath a glass case like a sleeping instrument."
+        },
+        {
+          "speaker": "touko",
+          "text": "If your equation cannot tell me where the field lives, I am going to ask the apparatus instead."
+        }
+      ],
+      "official_briefing": {
+        "speaker": "Guest Researcher",
+        "topic": "quantized radiation and light-matter coupling",
+        "text": "You will move from oscillator language into electromagnetic modes, photon states, Rabi oscillations, and the Jaynes-Cummings model. The task is not to memorize names. You must distinguish classical-field approximations from quantized-field effects, and you must watch which excitation is being exchanged.",
+        "what_not_to_assume": "Do not assume bright, coherent, number, and thermal fields have the same photon statistics."
+      },
+      "mid_scene_reaction": [
+        {
+          "speaker": "rikka",
+          "text": "The mode is an oscillator. The atom is not the oscillator. That difference is the whole match."
+        },
+        {
+          "speaker": "haru",
+          "text": "So the field can be a partner, not just a push."
+        }
+      ],
+      "rival_pressure_scene": [
+        {
+          "speaker": "touko",
+          "text": "Where does your photon go if the mirror is not perfect? I will wait."
+        },
+        {
+          "speaker": "rikka",
+          "text": "Long enough for me to answer properly, I hope."
+        }
+      ],
+      "breakthrough_scene": [
+        {
+          "speaker": "haru",
+          "text": "The same symbol can feel different when the field stops being a background and starts keeping count."
+        },
+        {
+          "speaker": "minori",
+          "text": "You noticed the change of model. That is worth points."
+        }
+      ],
+      "notebook_update": "Haru marks two columns: classical drive and quantized mode. She leaves space between them.",
+      "next_hook": "A cross-examination ticket arrives from Kuroha Academy: reservoir memory permitted."
+    },
+    {
+      "id": "session_03",
+      "title": "Repechage: The Silent Reservoir",
+      "source_refs": [
+        "ref_ch4_reservoir",
+        "ref_ch5_cavity",
+        "ref_ch6_media"
+      ],
+      "opening_scene": [
+        {
+          "speaker": "narration",
+          "text": "Kuroha's table looked almost empty: two pens, one clock, and a stack of questions sharp enough to make the air feel thinner."
+        },
+        {
+          "speaker": "mio",
+          "text": "Tell me what you traced out, and I will tell you whether I believe the answer."
+        }
+      ],
+      "official_briefing": {
+        "speaker": "Problem Committee Member",
+        "topic": "open quantum systems, cavity loss, and propagation conditions",
+        "text": "This round examines what happens when a small quantum system is not alone. You will need reduced density operators, reservoir assumptions, master-equation thinking, and the ability to compare coherent dynamics with loss. In the propagation problems, remember that the medium and field shape each other.",
+        "what_not_to_assume": "Do not assume dissipation is a small afterthought; it can decide the observable result."
+      },
+      "mid_scene_reaction": [
+        {
+          "speaker": "sayo",
+          "text": "Last year, we answered as if the environment had politely left the room."
+        },
+        {
+          "speaker": "haru",
+          "text": "It had not."
+        }
+      ],
+      "rival_pressure_scene": [
+        {
+          "speaker": "mio",
+          "text": "Weak coupling, short memory, unchanged reservoir. Which of those are you actually using?"
+        },
+        {
+          "speaker": "minori",
+          "text": "Answer her. Not quickly. Correctly."
+        }
+      ],
+      "breakthrough_scene": [
+        {
+          "speaker": "haru",
+          "text": "The missing system still leaves fingerprints. If we ignore it, the clean equation becomes a story we told ourselves."
+        },
+        {
+          "speaker": "mio",
+          "text": "That is the first answer today I did not want to interrupt."
+        }
+      ],
+      "notebook_update": "Haru writes: the part you do not observe can still define the state you do observe.",
+      "next_hook": "Akebono's borrowed textbook is open to the chapter on qubits."
+    },
+    {
+      "id": "session_04",
+      "title": "Finalist Selection: Information That Cannot Be Copied",
+      "source_refs": [
+        "ref_ch8_qubits",
+        "ref_ch8_entanglement"
+      ],
+      "opening_scene": [
+        {
+          "speaker": "narration",
+          "text": "By evening, the tournament hall had stopped feeling huge. It felt close, as if every team was leaning over the same fragile state."
+        },
+        {
+          "speaker": "yui",
+          "text": "If we understand it alone, it does not count as understanding for our team."
+        }
+      ],
+      "official_briefing": {
+        "speaker": "Announcer",
+        "topic": "qubits, gates, no-cloning, entanglement, and protocols",
+        "text": "This session turns information into a physical object. You will be asked about qubit states, measurement, no-cloning, Bell states, teleportation, dense coding, and cryptographic basis choices. Keep the difference between a known classical label and an unknown quantum state clear.",
+        "what_not_to_assume": "Do not assume entanglement sends usable messages faster than classical communication permits."
+      },
+      "mid_scene_reaction": [
+        {
+          "speaker": "haru",
+          "text": "Not being able to copy it is not a weakness. It is the rule that makes the rest meaningful."
+        },
+        {
+          "speaker": "rikka",
+          "text": "You just said the theorem like it mattered to a person."
+        }
+      ],
+      "rival_pressure_scene": [
+        {
+          "speaker": "yui",
+          "text": "If your partner cannot follow the protocol, the protocol has not really arrived."
+        },
+        {
+          "speaker": "sayo",
+          "text": "That is inheritance too."
+        }
+      ],
+      "breakthrough_scene": [
+        {
+          "speaker": "haru",
+          "text": "Entanglement is not a shortcut around explanation. It is a stricter promise about the whole."
+        },
+        {
+          "speaker": "minori",
+          "text": "You may be ready for the last room."
+        }
+      ],
+      "notebook_update": "Haru writes: physical information has rules, and those rules can protect trust.",
+      "next_hook": "The finalist board is covered before anyone can read the route."
+    },
+    {
+      "id": "session_05",
+      "title": "Final Session: The Device That Has To Be Real",
+      "source_refs": [
+        "ref_ch9_computation",
+        "ref_ch10_implementation"
+      ],
+      "opening_scene": [
+        {
+          "speaker": "narration",
+          "text": "The final session opened without music. Only a clean circuit diagram, a cavity sketch, and a list of allowed assumptions appeared on the screen."
+        },
+        {
+          "speaker": "sayo",
+          "text": "This is the question I could not carry alone."
+        }
+      ],
+      "official_briefing": {
+        "speaker": "Chief Judge",
+        "topic": "algorithms, error correction, and physical implementation",
+        "text": "The final session asks you to connect abstract computation with physical systems. You may use algorithms, error correction, and implementation criteria, but every claim must identify what is being controlled, what decoheres, how readout works, and what assumptions make the model valid.",
+        "what_not_to_assume": "Do not claim scalable computation from a single elegant effect."
+      },
+      "mid_scene_reaction": [
+        {
+          "speaker": "rikka",
+          "text": "A circuit is not a machine until the physics can keep the promise."
+        },
+        {
+          "speaker": "haru",
+          "text": "Then we answer as a team. Promise by promise."
+        }
+      ],
+      "rival_pressure_scene": [
+        {
+          "speaker": "natsuki",
+          "text": "If you omit one condition, the whole proof becomes decoration."
+        },
+        {
+          "speaker": "haru",
+          "text": "Then I will not omit it."
+        }
+      ],
+      "breakthrough_scene": [
+        {
+          "speaker": "haru",
+          "text": "A quantum computer is not won by saying 'quantum' louder. It is built when the state, gates, errors, and measurements all survive the same argument."
+        },
+        {
+          "speaker": "minori",
+          "text": "That answer belongs to this year's team."
+        }
+      ],
+      "notebook_update": "Haru closes the notebook before the scoreboard. The answer is no longer only Sayo's unfinished question.",
+      "next_hook": "The exact final result and ending route are sealed to preserve spoiler control outside play."
+    }
+  ],
+  "sealed_route_note": "SEALED route and final result details are stored in ending-plan.json and final-result-plan.json."
+}

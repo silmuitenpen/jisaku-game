@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "generated_at": "2026-06-18",
+    "generation_kind": "assets_manifest",
+    "review_mode": true,
+    "spoiler_mode": "safe",
+    "source_policy": "PDF-derived learning content; story structure and characters are model_inference."
+  },
+  "assets": [
+    {
+      "id": "team_character_sheet",
+      "type": "generated_bitmap",
+      "path": "assets/characters/team-character-sheet.png",
+      "source_label": "model_inference",
+      "description": "One shared visual-novel character sheet for the four protagonist-team girls.",
+      "consistency_role": "Anchor portrait sheet for MVP."
+    }
+  ],
+  "planned_assets": [
+    "Individual transparent standing portraits for each base-team character",
+    "Expression variants: neutral, focused, embarrassed, relieved, determined",
+    "Regional hall, lab bench, cavity demo, final stage backgrounds",
+    "Event illustration for a major late-game emotional scene, stored safely if spoilery"
+  ]
+}
