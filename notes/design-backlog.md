@@ -104,3 +104,59 @@ Do not mark these complete yet:
 5. Later targets:
    * `regen_target: knowledge` only when the PDF extraction itself needs correction.
    * `regen_target: app` only when browser implementation architecture needs a focused pass.
+
+---
+
+## 5. Play Feedback Promoted To Spec On 2026-06-19
+
+The following user feedback was promoted into `spec.md`, `docs/workflow.md`, and `AGENTS.md` during `regen_target: update_story_ui_design_spec_from_feedback`:
+
+* Story needs more entertainment value, not only serious tournament mood.
+* Future scenes should include kirara-style daily clubroom energy, light comedy, small punchlines, misunderstandings, teasing, and character banter.
+* Long cold opens should appear before problems, with enough reading texture to make the player care before the prompt.
+* Character appearance, habits, voice, props, and gestures should be introduced naturally through the protagonist's viewpoint.
+* Healthy affection, closeness, teasing, trust, embarrassment, and name usage are allowed.
+* Sexualized description, explicit romance, and adultized fanservice remain forbidden because the characters are minors.
+* Science scenes should shift from daily comedy into serious competition.
+* Problem cards must not be preceded by scenes that leak the answer.
+* Post-answer explanations should be concise and formula-backed where relevant.
+* UI direction should move from educational HTML toward ADV / visual novel presentation.
+* LaTeX should not remain as raw player-facing text; future UI work should render formulas.
+* Prompt quality must be checked before regeneration or edits.
+* If prompt correctness or file-scope mapping is unclear, Codex should stop and ask rather than silently fixing.
+
+---
+
+## 6. New Backlog From Play Feedback
+
+These items are not implemented yet:
+
+* Rewrite future sessions with 800-1500 character long cold opens.
+* Add title-call data for session title, tournament round, opponent school, and theme.
+* Add pre-problem character banter blocks of 4-8 exchanges.
+* Add character-specific hint data instead of one generic hint string.
+* Add correct and incorrect feedback data with character reactions.
+* Add concise formula-backed explanations to prompts.
+* Add prompt-quality QA that checks answer uniqueness, gate alignment, wrong-option quality, and answer leakage.
+* Redesign the browser UI into ADV style with text box, speaker name, sprite area, background panel, problem card, hint bubbles, and notebook update presentation.
+* Add MathJax or equivalent LaTeX rendering.
+* Consider vendoring MathJax for complete offline play.
+* Review existing prompts that may not be solvable or may not match their gate values.
+
+Recommended future targets:
+
+1. `regen_target: story_session_structure`
+   * Add long cold open, title call, banter, and notebook beat structure to one session at a time.
+   * Do not edit UI or assets.
+
+2. `regen_target: prompt_quality`
+   * Audit prompt wording, gate alignment, answer uniqueness, options, and explanations.
+   * Stop and ask if a prompt's science is ambiguous.
+
+3. `regen_target: adv_ui`
+   * Redesign the browser presentation as an ADV-style game interface.
+   * Do not regenerate scenario content during this target.
+
+4. `regen_target: latex_rendering`
+   * Add MathJax or equivalent local-compatible rendering for formulas.
+   * Decide separately whether CDN or vendored offline assets are required.

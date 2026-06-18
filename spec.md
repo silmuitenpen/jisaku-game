@@ -367,6 +367,55 @@ Avoid:
 
 ---
 
+## 6B. Daily Clubroom Comedy And Character Attachment Policy
+
+Future scenario writing should move beyond a serious tournament outline and include the air of a kirara-style daily club activity story.
+
+The game should still be a science olympiad learning game, but the moment-to-moment reading experience should include:
+
+* small jokes
+* quick character banter
+* harmless misunderstandings
+* teasing among teammates
+* a small punchline or comic release before tension rises
+* clubroom, waiting room, hallway, travel, or venue slice-of-life scenes
+* character habits, props, gestures, voice impressions, and visual details seen through the protagonist's eyes
+
+Before a problem begins, include a readable introduction scene rather than jumping directly into a quiz. The introduction should make the player want to spend time with the characters before the scientific pressure arrives.
+
+The protagonist's closeness with the girls may be shown through:
+
+* name usage
+* eye contact
+* shy pauses
+* mutual teasing
+* encouragement
+* small favors
+* trust built through shared confusion
+* healthy affection and emotional closeness
+
+Because the characters are minors, do not use sexualized description, explicit romance, erotic framing, or adultized fanservice. Keep intimacy healthy: fondness, trust, embarrassment, admiration, and playful distance.
+
+Character appearance and charm should be introduced naturally through action:
+
+* hair, eyes, uniform, accessories, and posture
+* the way a character holds a pencil, notebook, timer, ribbon, bag, or lab item
+* characteristic speech rhythm
+* a recurring tiny habit
+* a joke where the character lightly teases her own strength, weakness, or visual motif
+
+Science scenes should often shift from daily comedy into serious competition:
+
+```text
+small joke -> character banter -> strange detail -> official pressure -> problem
+```
+
+The joke must not reveal the answer. It may introduce mood, stakes, character relationships, or a misleading everyday analogy, but the decisive scientific idea must remain gated behind the prompt.
+
+After the player answers, explanations should be concise and may use formulas. Avoid long lectures.
+
+---
+
 ## 7. Official Briefing Before Foundation Round
 
 > 日本語コメント：
@@ -728,6 +777,62 @@ Do not use a fixed prompt count for every session.
 
 ---
 
+## 15A. Future Standard Session Structure
+
+For future scenario regeneration, each session should use this structure unless the user explicitly requests a smaller patch:
+
+1. Long cold open
+
+   * 800-1500 Japanese characters.
+   * Set in a venue, clubroom, waiting room, hallway, train, bus, lodging space, or other lived-in place.
+   * Include character appearance, gestures, relationship texture, small comedy, and a small punchline.
+   * End with a subtle oddity, pressure, or observation that leads naturally into the scientific topic.
+
+2. Title call
+
+   * Show the session title.
+   * Show tournament round, opponent school, and scientific theme.
+
+3. Official briefing
+
+   * Short and solemn.
+   * State what kind of reasoning will be tested.
+   * Do not give the answer.
+
+4. Character banter before problem
+
+   * 4-8 dialogue exchanges.
+   * Include a misunderstanding, joke, tease, or tension release.
+   * End by handing the question to the player.
+   * Do not leak the answer.
+
+5. Problem card
+
+   * Present the prompt clearly.
+   * Store formulas as LaTeX where useful.
+   * Assume the UI will render formulas rather than showing raw LaTeX forever.
+
+6. Character-specific hints
+
+   * Do not use one generic hint line for every prompt.
+   * The protagonist, genius first-year, gentle upperclassman, and strict second-year should hint in different voices.
+
+7. Answer feedback
+
+   * Correct answers trigger a character reaction plus a short formula-based explanation where relevant.
+   * Wrong answers trigger a short character-specific reaction and a reason the answer fails.
+   * Keep explanations concise.
+
+8. Notebook update
+
+   * Record today's learning.
+   * Record the question carried forward.
+   * Include a small character reaction or punchline.
+
+This structure is a future generation target. Do not retrofit all existing generated data in an unrelated target.
+
+---
+
 ## 16. Prompt and Evaluation Policy
 
 > 日本語コメント：
@@ -768,6 +873,35 @@ If the player views the full answer, mark the prompt as:
 * `unresolved`
 
 The player can remove this mark only by answering correctly without viewing the answer.
+
+---
+
+## 16A. Prompt Quality Gate
+
+Before editing or regenerating prompts, check every prompt for:
+
+* whether the prompt can be solved from the prompt text alone
+* whether the correct answer is unique enough for the gate type
+* whether `gate.answer` / `gate.answers` matches the prompt wording
+* whether each wrong option is clearly wrong
+* whether required formulas appear in the explanation
+* whether LaTeX formulas are intended for UI rendering
+* whether pre-problem story text leaks the answer
+
+If a prompt appears invalid, ambiguous, or mismatched with its gate, Codex must stop and ask the user instead of silently rewriting the science.
+
+When explanations need formulas, prefer concise formula-backed explanations over long prose. Example:
+
+```text
+E_n = \hbar\omega(n + 1/2), so n = 0 gives E_0 = (1/2)\hbar\omega.
+```
+
+Do not use a single generic hint for every prompt. Hints should be character-specific:
+
+* protagonist: honest confusion and a basic question
+* genius first-year: compressed, sharp clue
+* gentle upperclassman: a soft question that points to the missing assumption
+* strict second-year: precise warning about what loses points
 
 ---
 
@@ -1013,6 +1147,36 @@ Do not show hidden motivations, decisive relationships, final results, ending ro
 
 ---
 
+## 21A. ADV UI And Formula Rendering Direction
+
+Future UI work should move away from educational HTML page styling and toward an ADV / visual novel game interface.
+
+Required future UI elements:
+
+* ADV-style text box
+* speaker name display
+* character standing-sprite area, with placeholders allowed at first
+* background panel, using color, gradient, venue name, or simple illustration placeholder if needed
+* progress bar
+* tournament round, opponent school, and theme display
+* problem card
+* character-specific hint bubbles
+* correct / incorrect feedback panels
+* notebook update animation or transition
+* LaTeX formula rendering support
+
+Problem cards and explanations may store formulas as LaTeX:
+
+* `\( ... \)`
+* `\[ ... \]`
+* `$$ ... $$`
+
+Do not treat raw LaTeX strings as the final player-facing display. The browser app should render formulas with MathJax or a similar local-compatible renderer.
+
+Because local execution is important, keep MathJax implementation in the backlog first. If full offline support is required, consider vendoring MathJax under a local vendor directory rather than depending on a CDN.
+
+---
+
 ## 22. Spoiler Control and Player-Safe Review
 
 > 日本語コメント：
@@ -1170,6 +1334,27 @@ Usage reduction rules:
 * Do not overwrite existing generated files without checking current state first.
 * Do not overwrite any file marked with `manual_locked: true`.
 * Normal reports must remain spoiler-safe.
+
+Stop instead of continuing autonomously when:
+
+* mapping between existing structure and the requested target is ambiguous
+* editing `generated/` would be needed during a spec/backlog-only target
+* implementation work starts to become necessary
+* session prose regeneration becomes tempting during a planning-only target
+* prompt correctness is uncertain
+* extra research or PDF rereading would be needed
+* the work appears likely to exceed 5 minutes
+* editing a non-allowed file appears necessary
+
+When stopping, report only:
+
+* stopping reason
+* relevant file
+* ambiguity
+* option A
+* option B
+* recommendation
+* question for the user
 
 Recommended target order:
 

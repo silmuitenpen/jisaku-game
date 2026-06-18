@@ -397,6 +397,40 @@ generated/data/sealed/
 
 ---
 
+## 13A. Feedback-To-Spec Update Procedure
+
+Use `regen_target: update_story_ui_design_spec_from_feedback` when the user gives play feedback that should change future generation rules.
+
+This target is documentation-only.
+
+May update:
+
+* `spec.md`
+* `docs/workflow.md`
+* `notes/design-backlog.md`
+* `AGENTS.md`
+
+Must not update:
+
+* `generated/`
+* `characters/`
+* `assets/`
+* `source/textbook.pdf`
+* `generated/data/sealed/`
+
+Classify feedback into:
+
+* story writing rules
+* session structure rules
+* prompt quality rules
+* UI direction rules
+* formula rendering rules
+* backlog items for later implementation
+
+Do not regenerate story text, prompts, UI, or assets in this target.
+
+---
+
 ## 14. Partial Regeneration
 
 Use `regen_target` to regenerate only part of the project.
@@ -406,6 +440,7 @@ Possible values:
 ```text
 all
 spec
+update_story_ui_design_spec_from_feedback
 knowledge
 story
 story_japanese
@@ -433,11 +468,31 @@ Target scopes:
 | regen_target | May touch | Must not touch |
 | --- | --- | --- |
 | `spec` | `spec.md`, `docs/workflow.md`, `notes/design-backlog.md`, `AGENTS.md` | `generated/`, `characters/`, `assets/`, `source/textbook.pdf` |
+| `update_story_ui_design_spec_from_feedback` | `spec.md`, `docs/workflow.md`, `notes/design-backlog.md`, `AGENTS.md` | `generated/`, `characters/`, `assets/`, `source/textbook.pdf`, sealed artifacts |
 | `knowledge` | `generated/data/knowledge-map.json`, `generated/data/source-refs.json`, public-review coverage, generation log | browser app files, scenario prose, assets, character art |
 | `story_japanese` | `generated/data/scenario.json`, `generated/data/session-plan.json`, `generated/data/prompts.json`, synced embedded data only if needed | PDF extraction, image assets, browser implementation rewrites, sealed spoilers in normal report |
 | `character_ui` | character profile fields, `generated/data/characters.json`, UI code and CSS needed for the profile screen | story regeneration, PDF rereading, image generation |
 | `assets` | character-art guidelines, asset manifest, generated asset files | scenario text, prompt data, PDF extraction, browser app architecture |
 | `qa` | `generated/data/public-review/*`, `notes/generation-log.md`, small documentation warnings | full regeneration, browser automation, image generation, sealed spoiler exposure |
+
+Stop rules for usage savings:
+
+* Stop if the requested target does not clearly map to existing files.
+* Stop if `generated/` edits become necessary during a spec/backlog-only target.
+* Stop if implementation work, scenario regeneration, PDF rereading, image generation, or browser verification becomes tempting outside the current target.
+* Stop if prompt correctness cannot be judged confidently from existing data.
+* Stop if additional research or more than about 5 minutes of exploration would be needed.
+* Stop if a non-allowed file would need editing.
+
+When stopping, report only:
+
+* stopping reason
+* relevant file
+* ambiguity
+* option A
+* option B
+* recommendation
+* question for the user
 
 Examples:
 

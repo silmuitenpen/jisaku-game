@@ -14,6 +14,26 @@ Execution rules:
 * Respect any `manual_locked: true` marker.
 * Keep normal status reports spoiler-safe.
 
+For `regen_target: update_story_ui_design_spec_from_feedback`, edit documentation only:
+
+* `spec.md`
+* `docs/workflow.md`
+* `notes/design-backlog.md`
+* `AGENTS.md`
+
+Do not edit `generated/`, `characters/`, `assets/`, `source/textbook.pdf`, or sealed artifacts during that target.
+
+Stop instead of continuing autonomously when:
+
+* existing structure does not clearly match the requested target
+* a non-allowed file would need editing
+* a text encoding problem appears
+* generated data, UI implementation, scenario rewriting, PDF rereading, image generation, or browser verification becomes necessary outside the requested target
+* prompt correctness is uncertain
+* extra research or more than about 5 minutes of exploration would be needed
+
+When stopping, report only the stopping reason, relevant file, ambiguity, two options, a recommendation, and the question for the user.
+
 Spoiler rules:
 
 * `generated/data/sealed/` may contain major spoilers and is intentionally tracked by Git.
