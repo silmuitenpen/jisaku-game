@@ -55,6 +55,8 @@ Use this configuration for normal personal use:
 
 This preserves the player experience while still allowing quality checks.
 
+Use `regen_target: all` only for a deliberate first full generation. For follow-up work, choose one narrow `regen_target`.
+
 ---
 
 ## 3. Phase 1: Source Analysis
@@ -403,14 +405,39 @@ Possible values:
 
 ```text
 all
+spec
 knowledge
 story
+story_japanese
 sessions
 scenario
 characters
+character_ui
 assets
 app
+qa
 ```
+
+Normal rule:
+
+* Use one `regen_target` per Codex execution.
+* Do not use `regen_target: all` except for a deliberate first full generation.
+* Do not run Browser Agent, automated browser verification, or Playwright-style checks in the normal split workflow.
+* The user performs real browser QA manually by opening `generated/index.html`.
+* Do not mix PDF rereading, scenario rewriting, image generation, and browser implementation in the same execution.
+* Check current files before editing, and do not overwrite `manual_locked: true` files.
+* Keep normal reports spoiler-safe.
+
+Target scopes:
+
+| regen_target | May touch | Must not touch |
+| --- | --- | --- |
+| `spec` | `spec.md`, `docs/workflow.md`, `notes/design-backlog.md`, `AGENTS.md` | `generated/`, `characters/`, `assets/`, `source/textbook.pdf` |
+| `knowledge` | `generated/data/knowledge-map.json`, `generated/data/source-refs.json`, public-review coverage, generation log | browser app files, scenario prose, assets, character art |
+| `story_japanese` | `generated/data/scenario.json`, `generated/data/session-plan.json`, `generated/data/prompts.json`, synced embedded data only if needed | PDF extraction, image assets, browser implementation rewrites, sealed spoilers in normal report |
+| `character_ui` | character profile fields, `generated/data/characters.json`, UI code and CSS needed for the profile screen | story regeneration, PDF rereading, image generation |
+| `assets` | character-art guidelines, asset manifest, generated asset files | scenario text, prompt data, PDF extraction, browser app architecture |
+| `qa` | `generated/data/public-review/*`, `notes/generation-log.md`, small documentation warnings | full regeneration, browser automation, image generation, sealed spoiler exposure |
 
 Examples:
 
@@ -495,6 +522,8 @@ source/*.pdf
 ## 17. Codex Execution Prompt Template
 
 Use this prompt when asking Codex to generate the game:
+
+`regen_target: all` is shown here only for a deliberate first full generation. For follow-up work, choose one narrow target such as `spec`, `story_japanese`, `character_ui`, `assets`, or `qa`.
 
 ```text
 Read spec.md and docs/workflow.md.

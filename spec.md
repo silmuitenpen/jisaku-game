@@ -137,6 +137,8 @@ Recommended default configuration:
 }
 ```
 
+This full configuration is for an intentional first generation. For follow-up work, choose one narrow `regen_target` and do not use `all` by default.
+
 Supported `spoiler_mode` values:
 
 * `full`
@@ -312,6 +314,59 @@ Player-facing translations:
 
 ---
 
+## 6A. Japanese Visual Novel Writing Policy
+
+Write the playable game as a Japanese visual novel from the beginning.
+
+Generate all player-facing text directly in Japanese, including:
+
+* story text
+* dialogue
+* narration
+* UI labels
+* prompt text
+* explanations
+* notebook entries
+* spoiler-safe summaries that discuss prose quality
+
+Do not write in English first and translate into Japanese.
+
+Dialogue must use Japanese corner brackets:
+
+```text
+「……まだ、分かったとは言えません」
+```
+
+Narration should be short, paced, and visual. Show emotion through:
+
+* silence
+* eye contact
+* looking away
+* hand movements
+* notes, chalk, score sheets, instruments, or other objects
+* small pauses before or after a line
+
+Scientific explanations must be accurate, but they must not become unnatural lecture dialogue.
+
+Before the player solves a prompt, the protagonist, senior students, and rivals must not reveal the core answer, decisive assumption, or final reasoning step. They may notice tension, ask partial questions, or point to what kind of reasoning is needed.
+
+Character voices must be distinct:
+
+* The protagonist asks honestly when she does not understand.
+* The genius character is sharp, but not magically good at explaining everything.
+* The gentle upperclassman gives questions, not answers.
+* The strict second-year is not a cold exposition machine; write her as someone with responsibility, urgency, and fear of repeating failure.
+
+Avoid:
+
+* translated-sounding Japanese
+* every character speaking in the same voice
+* explanation dialogue that sounds like a textbook app
+* meta lines such as `この概念を学ぶことは重要です`
+* conversations that reveal the correct answer or core insight before the prompt
+
+---
+
 ## 7. Official Briefing Before Foundation Round
 
 > 日本語コメント：
@@ -343,6 +398,17 @@ The briefing should include:
 The briefing must not reveal the answers to the prompts.
 
 It should prepare the player to think, not solve the round for them.
+
+The briefing should feel like tournament pressure, not a textbook lecture.
+
+Use the voice of the speaker:
+
+* a judge frames what will be evaluated
+* an announcer raises match pressure
+* a guest researcher gives context without solving the prompt
+* a senior examiner warns against common assumptions
+
+Keep briefings concise. They should introduce vocabulary, stakes, and reasoning direction while preserving the player's discovery.
 
 ---
 
@@ -732,6 +798,10 @@ After player success, the protagonist may:
 
 Important insights must occur only after the player clears the relevant prompts.
 
+Prompt setup scenes must not leak the answer. Before the prompt, dialogue may show confusion, pressure, or partial orientation, but must not state the correct conclusion, decisive assumption, final equation step, or hidden turning point.
+
+Retries and answer reveals should be treated as part of the protagonist's learning state. They may create notebook marks or unresolved feelings, but must not punish the player with story failure.
+
 ---
 
 ## 18. Scenario Data Model
@@ -845,6 +915,57 @@ Character Bible fields must include:
 * reason to compete
 * relationship to protagonist
 
+Visual generation must avoid images that are obviously AI-generated.
+
+Aim for the naturalness of a human-drawn bishoujo visual novel standing sprite.
+
+Prioritize:
+
+* clear character readability
+* stable silhouette
+* consistent face, hair, eyes, uniform structure, and key accessories
+* emotionally useful expression variants over sheer image quantity
+
+Avoid:
+
+* excessive saturation
+* excessive gloss
+* meaningless tiny details
+* meaningless accessories
+* random ribbons
+* inconsistent hair ornaments
+* broken hands
+* extra fingers
+* warped eyes
+* asymmetrical pupils
+* plastic texture
+* AI-like glossy skin
+* over-sharpened highlights
+* hyper-detailed visual noise
+
+Use this image production order:
+
+1. Character Bible
+2. character design sheet
+3. base standing sprite
+4. expression variants
+5. outfit variants only if necessary
+6. event illustration only for major scenes
+
+Each character bible should separate:
+
+* `fixed_visual_traits`
+* `variable_visual_traits`
+
+When generating variants, preserve:
+
+* hairstyle
+* eye shape and eye color
+* face outline
+* uniform structure
+* major accessories
+* character-specific silhouette
+
 ---
 
 ## 21. Browser Game Requirements
@@ -872,7 +993,23 @@ The app should support:
 * prompt / answer screen
 * notebook / review screen
 * retry list
+* character profile screen available during play
 * progress persistence
+
+The character profile screen should show spoiler-safe visual identification details, such as:
+
+* name
+* school
+* grade
+* role
+* hairstyle
+* hair color
+* eyes
+* uniform
+* small accessories
+* quick recognition cue
+
+Do not show hidden motivations, decisive relationships, final results, ending routes, or unintroduced spoiler-heavy facts in character profiles.
 
 ---
 
@@ -1010,13 +1147,38 @@ notes/design-backlog.md
 Supported regeneration targets:
 
 * `all`
+* `spec`
 * `knowledge`
 * `story`
+* `story_japanese`
 * `sessions`
 * `scenario`
 * `characters`
+* `character_ui`
 * `assets`
 * `app`
+* `qa`
+
+Usage reduction rules:
+
+* Do not use `regen_target: all` by default.
+* Use only one `regen_target` per Codex execution.
+* Prefer small, reviewable changes over broad regeneration.
+* Do not mix PDF rereading, scenario rewriting, image generation, and browser implementation in the same execution.
+* Do not run Browser Agent or automated browser verification as part of normal generation.
+* The user performs real browser QA manually by opening `generated/index.html`.
+* Do not overwrite existing generated files without checking current state first.
+* Do not overwrite any file marked with `manual_locked: true`.
+* Normal reports must remain spoiler-safe.
+
+Recommended target order:
+
+1. `regen_target: spec`
+2. `regen_target: knowledge`
+3. `regen_target: story_japanese`
+4. `regen_target: character_ui`
+5. `regen_target: assets`
+6. `regen_target: qa`
 
 Avoid overwriting manually reviewed files unless explicitly requested.
 

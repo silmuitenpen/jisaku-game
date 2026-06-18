@@ -1,164 +1,106 @@
 # Design Backlog
 
-> 日本語コメント：
-> このファイルは、初回生成後に改善するための設計メモである。
-> いま全部を仕様化しすぎると一度も生成できないので、懸念点をここに退避する。
-> 初回生成物を見てから、必要なものを `spec.md` や将来の `spec/` 分割ファイルに昇格させる。
+This file tracks design concerns that should become small, targeted follow-up work. It is not a request to regenerate everything at once.
+
+Use `spec.md` and `docs/workflow.md` as the authoritative rules. Keep future work split by one `regen_target` per Codex execution.
 
 ---
 
-## 1. Narrative Writing Quality
+## 1. Already Covered By Existing Spec
 
-Current concern:
-The story direction is specified, but the detailed writing craft is not yet strict enough.
+These concerns were already present before the current `regen_target: spec` pass:
 
-Future additions:
-
-* scene-level writing rules
-* dialogue style guide
-* silence and tension rules
-* how to write emotional pressure
-* how to avoid generic anime dialogue
-* how to make scientific turning points feel dramatic
-* how to handle character distance and recognition
-* how to write rival-school sympathy without stealing focus from protagonist team
-* how to avoid exposition-heavy scenes
-* how to make Official Briefings feel like tournament pressure rather than textbook lectures
+* PDF-derived learning units must be traceable through `knowledge-map.json` and `source-refs.json`.
+* Official Briefing scenes must appear before Foundation Rounds and must not reveal prompt answers.
+* Prompts must gate story progression.
+* The protagonist team must be fixed and reused through `characters/base-team.json`.
+* Rival schools must have serious arcs and must not be disposable opponents.
+* Spoiler-heavy artifacts belong under `generated/data/sealed/`.
+* Spoiler-safe review files belong under `generated/data/public-review/`.
+* `generated/data/sealed/` is intentionally Git-tracked.
+* The MVP must run locally with HTML, CSS, and Vanilla JavaScript.
 
 ---
 
-## 2. Rival School Arc Depth
+## 2. Promoted To Spec In This Pass
 
-Current concern:
-Rival schools are required to have stories, but the structure may still be too shallow.
+The following backlog items were promoted during the 2026-06-18 `regen_target: spec` pass:
 
-Future additions:
+* Narrative Writing Quality:
+  * Japanese game text must be written directly as natural Japanese visual-novel prose.
+  * Translation-flavored Japanese is forbidden.
+  * Dialogue must use `「」`.
+  * Emotion should be shown through silence, gaze, pauses, and hand movement.
+  * Scientific explanations must remain accurate without becoming lecture dialogue.
+  * Character voices must stay distinct.
 
-* rival-school arc templates
-* internal team relationship patterns
-* rival school pre-match / match / post-match structure
-* how to make the player want to support rival schools
-* how to show another school's inheritance theme without overexplaining
-* how to make rival schools feel like they could be protagonists of another story
-* how to prevent rival schools from becoming shallow villains
-* how to connect each school style to PDF-derived scientific concepts
+* Official Briefing Quality:
+  * Briefings should feel like tournament pressure, not textbook lectures.
+  * Judges, announcers, guest researchers, and examiners should have distinct briefing roles.
+  * Briefings should orient the player without solving prompts.
 
----
+* Prompt and Story Integration:
+  * Scenes before a prompt must not reveal the correct answer, decisive assumption, final equation step, or hidden turning point.
+  * Retries and answer reveals should be treated as learning state, not punitive story failure.
 
-## 3. Official Briefing Quality
+* Character Consistency and Attachment:
+  * The app specification now includes a spoiler-safe character profile screen available during play.
+  * Character profiles should emphasize visual identification and avoid hidden motivations or major story spoilers.
 
-Current concern:
-Official Briefings may become dry exposition.
+* Character Image Generation:
+  * The image pipeline now specifies Character Bible, design sheet, base standing sprite, expression variants, optional outfit variants, and event illustrations.
+  * `fixed_visual_traits` and `variable_visual_traits` are now required planning concepts.
+  * AI-looking gloss, visual noise, broken hands, extra fingers, and inconsistent accessories are explicitly forbidden.
 
-Future additions:
+* Spoiler-Safe Workflow:
+  * `AGENTS.md` now records execution guardrails and sealed-artifact handling.
+  * Normal status reports must not expose sealed spoiler details.
 
-* briefing voice patterns
-* judge / announcer / guest researcher character roles
-* how to explain without giving away answers
-* how to use briefing to raise tournament pressure
-* how to introduce vocabulary without killing momentum
-* how to make the player feel prepared, not spoiled
-
----
-
-## 4. Prompt and Story Integration
-
-Current concern:
-Prompts may feel like interruptions to the story.
-
-Future additions:
-
-* stronger rules for prompt-to-scene payoff
-* how to make each round unlock a specific emotional or relational movement
-* how to connect wrong answers and retries to protagonist hesitation
-* how to make notebook entries feel like story artifacts
-* how to make Show Answer penalties narratively meaningful without feeling punitive
+* Usage Reduction And Split Execution:
+  * `regen_target: all` is no longer the normal default for follow-up work.
+  * One Codex execution should handle one `regen_target`.
+  * Browser Agent and automated browser verification are banned in the normal split workflow.
+  * Manual browser QA is the default.
 
 ---
 
-## 5. Character Consistency and Attachment
+## 3. Still In Backlog
 
-Current concern:
-The protagonist team and rivals may not become lovable enough in the first version.
+Do not mark these complete yet:
 
-Future additions:
-
-* recurring speech patterns
-* relationship progression rules
-* teammate recognition scenes
-* rival recognition scenes
-* small non-plot character habits
-* emotional callback rules
-* how to preserve character consistency across PDFs
-
----
-
-## 6. Spoiler-Safe Workflow
-
-Current concern:
-The user is also the player, so full intermediate review can spoil the story.
-
-Future additions:
-
-* stricter spoiler-safe report format
-* redaction rules
-* sealed artifact warning convention
-* how to compare sealed diffs without reading content
-* optional blind mode workflow
-* generated filenames that clearly warn about spoilers
+* Actual Japanese scenario rewriting for game prose, UI labels, prompts, and explanations.
+* Actual character profile UI implementation in HTML/CSS/JavaScript.
+* Actual character data additions for profile display.
+* Actual image regeneration or asset splitting.
+* Rival school arc depth improvements.
+* Rival-school pre-match, match, and post-match structure templates.
+* Spec directory split.
+* Visual figure rounds using PDF figures.
+* Post-completion spoiler unlock inside the app.
+* Keyboard shortcuts and stronger accessibility labels.
+* Final-session content expansion.
+* Safer sealed-diff review workflow that does not reveal spoiler text.
 
 ---
 
-## 7. Spec Directory Split
+## 4. Recommended Next `regen_target`
 
-Current concern:
-`spec.md` may become too large.
+1. `regen_target: story_japanese`
+   * Rewrite scenario, prompt, session, and UI-facing text into natural Japanese visual-novel prose.
+   * Do not reread the PDF, regenerate assets, or rewrite browser architecture.
 
-Future split candidate:
+2. `regen_target: character_ui`
+   * Add spoiler-safe character profile fields and the in-game `登場人物` UI.
+   * Do not regenerate scenario text, assets, or knowledge files.
 
-```text
-spec/
-├── 00-mission.md
-├── 01-repository.md
-├── 02-generation-workflow.md
-├── 03-source-and-knowledge.md
-├── 04-narrative-direction.md
-├── 05-character-team.md
-├── 06-rival-schools.md
-├── 07-drama-beats.md
-├── 08-session-and-prompts.md
-├── 09-evaluation.md
-├── 10-visual-assets.md
-├── 11-browser-app.md
-├── 12-spoiler-control.md
-└── 13-qa.md
-```
+3. `regen_target: assets`
+   * Create a character art guideline file and plan individual sprite/expression assets.
+   * Do not edit scenario or prompt logic.
 
-Keep `spec.md` as the entry point that links to these files.
+4. `regen_target: qa`
+   * Refresh public-review files and generation logs after the above narrow passes.
+   * Do not perform full regeneration.
 
----
-
-## 8. First Generation Review Questions
-
-After the first generated game, check:
-
-* Did the game run locally?
-* Were the prompts actually derived from the PDF?
-* Did the Official Briefings help without spoiling answers?
-* Did the protagonist team feel emotionally distinct?
-* Did rival schools feel worth supporting?
-* Did the story make me want to continue?
-* Did the prompts feel integrated into the story?
-* Did spoiler-safe review actually avoid major spoilers?
-* Was `generated/data/sealed/` useful or annoying?
-* What should be promoted from this backlog into `spec.md`?
-
----
-
-## 9. First Generated MVP Follow-Ups (2026-06-18)
-
-* Split the generated character sheet into individual portrait assets and add expression variants.
-* Add optional visual figure rounds after extracting selected PDF figures safely.
-* Consider a post-completion in-app spoiler unlock that reads sealed final-route data only after the player clears all sessions.
-* Expand the final implementation session with more physical-platform comparison prompts.
-* Add keyboard shortcuts and richer accessibility labels in the next app pass.
+5. Later targets:
+   * `regen_target: knowledge` only when the PDF extraction itself needs correction.
+   * `regen_target: app` only when browser implementation architecture needs a focused pass.
